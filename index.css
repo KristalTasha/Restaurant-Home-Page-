@@ -1,0 +1,95 @@
+ul {
+    list-style: none;
+    display: flex;
+    gap: 3em;
+    font-family: sans-serif;
+    float: right;
+    right: 5em;
+    padding-right: 2.5em;
+
+}
+
+li {
+    color: white;
+}
+
+header {
+    /*  display: flex;*/
+    /* justify-content: space-between;*/
+    /* padding: 0 1em; */
+    position: fixed;
+    width: 100%;
+    padding-top: 1.5em;
+    /*opacity: 70%; */
+}
+
+ul li a {
+    text-decoration: white;
+    color: white;
+}
+
+.firstscreen {
+    background-image: url("assignment/restaurant.jpg");
+    background-position: -18em;
+    display: flex;
+    width: 100%;
+    height: 80em;
+    z-index: -1;
+    position: absolute;
+}
+
+.Because{
+    position: absolute;
+    font-size: 4em;
+    color: white;
+    font-family: Calibri Light;
+    padding-left: 0.9em;
+    padding-top: 1.9em;
+}
+.youre{
+    position: relative;
+    font-size: 4.8em;
+    color: white;
+    font-family: Arial;
+    padding-left: 0.7em;
+    padding-top: 2.2em;  
+}
+
+.worthit{
+    position: absolute;
+    font-size: 4.8em;
+    color: white;
+    font-family: Arial;
+    padding-left: 0.7em;
+    padding-top: 3.9em;  
+}
+.stickers{
+    position: absolute;
+    padding-top: 42em;
+    
+}
+.sticker1{
+   /* display: flex;
+    flex-direction: column; */
+    gap:0.4em;
+    background-color: white;
+    height:21em; 
+    width: 16em;
+}
+
+/*
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.container{
+    display: grid;
+    grid-template-columns : 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+*/
