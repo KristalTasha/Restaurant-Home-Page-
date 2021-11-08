@@ -58,22 +58,23 @@ ul li a {
     padding-left: 0.9em;
     padding-top: 1.6em;
 }
-.youre{
-    position: relative;
-    font-size: 4.8em;
+.youre h1{
+    /*position: relative;*/
+    font-size: 6em;
     color: white;
     font-family: Roboto;
     padding-left: 0.7em;
-    padding-top: 2.2em;  
+    padding-top: 2.5em;  
 }
 
-.worthit{
-    position: absolute;
-    font-size: 4.8em;
+.worthit h1{
+    position: absolute;  
+    font-size: 6em;
     color: white;
     font-family: Roboto;
-    padding-left: 0.7em;
+   /* padding-left: 0.7em;*/
     padding-top: 3.9em;  
+    left: 0.7em;
 }
 .stickers{
     position: absolute;
