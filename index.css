@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-*{
+* {
 
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
+
 }
 
 ul {
@@ -16,8 +16,6 @@ ul {
     float: right;
     right: 5em;
     padding-right: 2.5em;
-    /**/
-
 }
 
 li {
@@ -25,14 +23,12 @@ li {
 }
 
 header {
-     display: flex;
-     justify-content: space-between;
-    /*padding: 0 1em;*/
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     width: 100%;
     padding-top: 1.5em;
     z-index: 20;
-    /*opacity: 70%; */
 }
 
 ul li a {
@@ -50,7 +46,7 @@ ul li a {
     position: absolute;
 }
 
-.Because{
+.Because {
     position: absolute;
     font-size: 4em;
     color: white;
@@ -58,160 +54,128 @@ ul li a {
     padding-left: 0.9em;
     padding-top: 1.6em;
 }
-.youre h1{
-    /*position: relative;*/
+
+.youre h1 {
     font-size: 6em;
+    font-weight: bold;
     color: white;
-    font-family: Roboto;
+    font-family: sans-serif;
     padding-left: 0.7em;
-    padding-top: 2.5em;  
+    padding-top: 2.0em;
 }
 
-.worthit h1{
-    position: absolute;  
+.worthit h1 {
+    position: absolute;
     font-size: 6em;
+    font-weight: bold;
     color: white;
-    font-family: Roboto;
-   /* padding-left: 0.7em;*/
-    padding-top: 3.9em;  
+    font-family: sans-serif;
+    padding-top: 3.2em;
     left: 0.7em;
 }
-.stickers{
+
+.stickers {
     position: absolute;
     padding-top: 42em;
-    left: 6em;    
+    left: 6em;
 }
 
-.stickerflex{
+.stickerflex {
     position: absolute;
     display: flex;
     gap: 1.5em;
 }
-.sticker1{
-   /* display: flex;
-    flex-direction: column; */
-    gap:0.4em;
+
+.sticker1,
+.sticker2,
+.sticker3,
+.sticker4 {
+    gap: 0.4em;
     background-color: white;
-    height:21em; 
+    height: 21em;
     width: 16em;
 }
 
-.sticker2{
-    /* display: flex;
-     flex-direction: column; */
-     gap:0.4em;
-     background-color: white;
-     height:21em; 
-     width: 16em;
- }
-
- .sticker3{
-    /* display: flex;
-     flex-direction: column; */
-     gap:0.4em;
-     background-color: white;
-     height:21em; 
-     width: 16em;
- }
-
- .sticker4{
-    /* display: flex;
-     flex-direction: column; */
-     gap:0.4em;
-     background-color: white;
-     height:21em; 
-     width: 16em;
- }
-
- .secondscreen {
- /*   background-image: url("assignment/restaurant.jpg"); */
+.secondscreen {
     display: flex;
     justify-content: center;
     background-color: #FFFBF3;
     width: 100%;
     height: 50em;
-   z-index: 3; 
+    z-index: 3;
     position: relative;
     top: 68em;
 }
 
-.page1{
+.page1 {
     display: flex;
     flex-direction: column;
-    
-   /* gap: 69em; */
 }
 
-.discover{
+.discover {
     object-position: center;
     font-size: 3em;
     color: black;
     font-weight: lighter;
-    font-family: sans-serif;
+    font-family: Roboto;
     top: 20%;
     position: absolute;
-  /* left: 35%; */
 }
 
-.shortstory
-{
+.shortstory {
     object-position: center;
     word-wrap: break-word;
     font-size: 1em;
     height: 20em;
-    width:30em;
+    width: 30em;
     color: black;
     font-weight: lighter;
     font-family: sans-serif;
     position: absolute;
-  /*  left: 30%; */
     top: 35%;
-   text-align: center;
+    text-align: center;
 }
 
 .thirdscreen {
-    /*   background-image: url("assignment/restaurant.jpg"); */
-       background-image: url("assignment/checked_menu.jpg");
-       background-position: top -20em;
-       background-size: 100%;
-     /* display: flex; */
-       width: 100%;
-       height: 40em;
-      /* top: -5em; */
-      z-index: -5; 
-       position: fixed;
-     overflow-x: hidden;
-   }
+    background-image: url("assignment/checked_menu.jpg");
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: center;
+    width: 100%;
+    height: 40em;
+    z-index: -5;
+    position: fixed;
+    overflow-x: hidden;
+}
 
-   .fourthscreen {
-    /*   background-image: url("assignment/restaurant.jpg"); */
-       display: flex;
-       opacity: 99%;
-       width: 100%;
-       height: 50em;
-      z-index: 4; 
-       position: relative;
-       top: 80em;
-   }
+.fourthscreen {
+    display: flex;
+    opacity: 99%;
+    width: 100%;
+    height: 40em;
+    z-index: 4;
+    position: relative;
+    top: 80em;
+}
 
-   .what{
-       color: white;
-       font-size: 4em;
-       position: relative;
-       font-family: Arial Thin;
-        left: 0.5em;
-   }
+.what {
+    color: white;
+    font-size: 4em;
+    position: relative;
+    font-family: Roboto;
+    left: 0.5em;
+}
 
-   .enjoy{
+.enjoy {
     color: white;
     font-size: 4.5em;
     position: absolute;
     font-family: Arial Thin;
-     left: 0.5em;
-     top: 1em;
+    left: 0.5em;
+    top: 1em;
 }
 
-.note{
+.note {
     color: white;
     font-size: 1em;
     position: absolute;
@@ -220,8 +184,8 @@ ul li a {
     left: 2.8em;
 }
 
-.button4{
-    background-color:#FDB763;
+.button4 {
+    background-color: #FDB763;
     color: white;
     font-size: 1em;
     height: 4.5em;
@@ -235,49 +199,46 @@ ul li a {
 
 
 .fifthscreen {
-    /*   background-image: url("assignment/restaurant.jpg"); */
-      display: flex;
-      object-position: center;
-       background-color: #FFFBF3;
-       width: 100%;
-       height: 70em;
-       top: 70em;
-      z-index: 5; 
-       position: relative;
-
-}
-
-.tips{
-  /*display: flex;*/
-   /* left: 10em; */
-    top: 10em;
-    position: absolute;  
-  width: 100%;
-}
-
-
-.tiprow1{
     display: flex;
-   /* flex-direction: row; */
-    justify-content: space-evenly; 
-  height: 25em; 
-   width: 100%;
- gap: 8em; 
-/* position: absolute; */
-} 
+    object-position: center;
+    background-color: #FFFBF3;
+    width: 100%;
+    height: 70em;
+    top: 70em;
+    z-index: 5;
+    position: relative;
 
-.fifthscreen .tip1, .tip2, .tip3, .tip4, .tip5, .tip6{
+}
+
+.tips {
+    top: 10em;
+    position: absolute;
+    width: 100%;
+}
+
+.tiprow1 {
+    display: flex;
+    justify-content: space-evenly;
+    height: 25em;
+    width: 100%;
+    gap: 8em;
+}
+
+.fifthscreen .tip1,
+.tip2,
+.tip3,
+.tip4,
+.tip5,
+.tip6 {
     justify-content: center;
-  /* display: flex;
-    flex-direction: column; */
     text-align: center;
     gap: 1em;
-   /* position: relative; */
     width: 15em;
-    
+
 }
 
-.fifthscreen p, .tiphead{
+.fifthscreen p,
+.tiphead {
     font-family: Roboto;
     color: black;
     padding-top: 0.6em;
@@ -289,75 +250,69 @@ ul li a {
     padding-top: 0.6em;
 }
 
-.tiphead{
+.tiphead {
     font-family: Roboto;
     font-size: 2em;
 }
 
-.tiprow2{
+.tiprow2 {
     display: flex;
-   /* flex-direction: row; */
-    justify-content: space-evenly; 
- /*  height: 100em; */
-   width: 100%;
-  /* position: absolute; */
-  gap: 8em; 
-} 
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 8em;
+}
 
 
 .sixthscreen {
-    background-image: url("assignment/bg21.jpg"); 
+    background-image: url("assignment/bg21.jpg");
     background-position: center;
     background-size: 100%;
     object-position: center;
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-      /* text-align: center; */
-       width: 100%;
-       height: 40em;
-      z-index: 6; 
-       position: relative;
-       top: 60em;
-   }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 40em;
+    z-index: 6;
+    position: relative;
+    top: 60em;
+}
 
-.checked{
+.checked {
     color: gold;
 }
 
-.rating{
+.rating {
     display: flex;
     justify-content: center;
     font-size: 2em;
     width: 100%;
-  /*  left: 20em;*/
     text-align: center;
-   top: 5em;
-  /*  flex-direction: row; */
+    top: 5em;
     gap: 0.5em;
     position: absolute;
 }
 
-.review{
-font-size: 1.5em;
-color: white;
-font-family: sans-serif;
-word-wrap: break-word;
-text-align: center;
-margin: 3em;
-top: 2em;
+.review {
+    font-size: 1.5em;
+    color: white;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 3em;
+    top: 2em;
 }
 
-.username{
-font-size: 0.7em;
-color: white;
-font-family: sans-serif;
-text-align: center;
-top: 12em;
+.username {
+    font-size: 0.7em;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    top: 12em;
 }
 
-.seventhscreen{
-    background-image: url("assignment/bg5.jpg");  
+.seventhscreen {
+    background-image: url("assignment/bg5.jpg");
     height: 30em;
     width: 100%;
     z-index: 7;
@@ -367,62 +322,55 @@ top: 12em;
     justify-content: space-evenly;
 }
 
-.seventhscreen p, h1{
+.seventhscreen p,
+h1 {
     font-family: Roboto;
     color: black;
 
 }
 
-.dishes{
+.dishes {
     display: flex;
-  /*  justify-content: center; */
     text-align: center;
     flex-direction: column;
-  /*  width:10em; */
     gap: 1.5em;
     height: 10em;
     top: 10em;
     position: relative;
 }
 
-.drinks{
+.drinks {
     display: flex;
-  /*  justify-content: center; */
     text-align: center;
     flex-direction: column;
-  /*  width:10em; */
     gap: 1.5em;
     height: 10em;
     top: 10em;
     position: relative;
 }
 
-.clients{
+.clients {
     display: flex;
-  /*  justify-content: center; */
     text-align: center;
     flex-direction: column;
-  /*  width:10em; */
     gap: 1.5em;
     height: 10em;
     top: 10em;
     position: relative;
 }
 
-.likes{
+.likes {
     display: flex;
-  /*  justify-content: center; */
     text-align: center;
     flex-direction: column;
-  /*  width:10em; */
     gap: 1.5em;
     height: 10em;
     top: 10em;
     position: relative;
 }
 
-.eigthscreen{
-    background-image: url("assignment/bg36.jpg");  
+.eigthscreen {
+    background-image: url("assignment/bg36.jpg");
     height: 50em;
     width: 100%;
     z-index: 8;
@@ -432,42 +380,37 @@ top: 12em;
     justify-content: space-evenly;
     flex-direction: row;
     gap: 8em;
-
 }
 
-.bookatable{
+.bookatable {
     color: white;
     font-size: 3em;
-    
+
     position: relative;
     font-family: sans-serif;
     margin-bottom: 1em;
 }
 
-input[type=text], textarea {
-    width: 50%; /* Full width */
- /*   padding: 0.5em; /* Some padding */ 
-   /* border: 1px solid #ccc; /* Gray border */
-    /* Make sure that padding and width stays in place */
- /*   margin-top: 0.2em; /* Add a top margin */
-  /*  margin-bottom: 1em; /* Bottom margin */
+input[type=text],
+textarea {
+    width: 50%;
     resize: none;
     background-color: none;
     opacity: 99%;
     position: relative;
     width: 100%;
-   border-color: grey;
-   border-width: 0.1em;
-   border-left: transparent;
-   border-right: transparent;
-  
+    border-color: grey;
+    border-width: 0.1em;
+    border-left: transparent;
+    border-right: transparent;
+
 }
 
 
-.book{
+.book {
     background-color: #FDB763;
     color: white;
-   padding: 0.7em;
+    padding: 0.7em;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -480,131 +423,101 @@ input[type=text], textarea {
     flex-direction: row;
     justify-content: center;
     gap: 0.5em;
-  }
+}
 
-  .book a{
-      color: white;
-      text-decoration: none;
-  }
+.book a {
+    color: white;
+    text-decoration: none;
+}
 
-  
-
-  .booking{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-        object-position: center;
-      width: 45%;
-      margin-left:3em;
-      position: relative;
-  }
-
-  form{
-      position: relative;
-      top: 2em;
-      width: 100%;
-  }
-
-  .contact{
-      width: 35%;
-     /* display: flex;
-     flex-direction: column; */
-      position: relative;
-      margin-right: 3em;
-  }
-
-  .contactbrief{
-      color: white;
-      font-family: sans-serif;
-      top: 22em;
-      word-wrap: break-word;
-      font-size: 1em;
-      position: relative;
-  }
-
-  footer{
-     /* display: flex; */
-      justify-content: space-evenly;
-      position: relative;
-      background-color: #252830 ;
-      height: 15em;
-      width: 100%;
-      top: 60em;
-      z-index: 9;
-    
-  }
-
-  .copyright{
-      font-family: sans-serif;
-      color: white;
-      position: relative;
-      top: 6.5em;
-      margin-left: 1em;
-  }
-
-  .smicons{
-      position: relative;
-      /*display: flex;*/
-      /*flex-direction: row; */
-      gap: 0.7em;
-    /*padding: 5em;*/
-      float: right;
-      margin-right: 3em;
-      top: 3.5em;
-      /*size: 5em; */
-  }
-
-  .smicons a{
-      padding: 0.2em;
-      color: lightgray; 
-      text-decoration: none; 
-      font-size: 2em;
-  }
-
-
-  .multilogo{
-      width: 30em;
-      display: flex;
-      position: relative;
-      word-wrap: none;
-  }
-
-  .contactus li p{
-     color: white ;
-     margin-left: 1em; 
-  }
-
-  .contactus li{
-      display: flex;
-      flex-direction: row;
-      position: relative;
-     
-  }
-
-  .contactus ul{
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      top: 25em;
-     float: left;
-      left: 0.5em;
-  }
-
-
-
-/*
-.container{
-    display:flex;
+.booking {
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 5px;
-    flex-wrap: wrap;
+    justify-content: center;
+    object-position: center;
+    width: 45%;
+    margin-left: 3em;
+    position: relative;
 }
 
-.container{
-    display: grid;
-    grid-template-columns : 1fr 1fr 1fr 1fr;
-    grid-gap: 5px;
+form {
+    position: relative;
+    top: 2em;
+    width: 100%;
 }
 
-*/
+.contact {
+    width: 35%;
+    position: relative;
+    margin-right: 3em;
+}
+
+.contactbrief {
+    color: white;
+    font-family: sans-serif;
+    top: 22em;
+    word-wrap: break-word;
+    font-size: 1em;
+    position: relative;
+}
+
+footer {
+    justify-content: space-evenly;
+    position: relative;
+    background-color: #252830;
+    height: 15em;
+    width: 100%;
+    top: 60em;
+    z-index: 9;
+}
+
+.copyright {
+    font-family: sans-serif;
+    color: white;
+    position: relative;
+    top: 6.5em;
+    margin-left: 1em;
+}
+
+.smicons {
+    position: relative;
+    gap: 0.7em;
+    float: right;
+    margin-right: 3em;
+    top: 3.5em;
+}
+
+.smicons a {
+    padding: 0.2em;
+    color: lightgray;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+.multilogo {
+    width: 30em;
+    display: flex;
+    position: relative;
+    word-wrap: none;
+}
+
+.contactus li p {
+    color: white;
+    margin-left: 1em;
+}
+
+.contactus li {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+}
+
+.contactus ul {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 25em;
+    float: left;
+    left: 0.5em;
+}
