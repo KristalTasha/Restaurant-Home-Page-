@@ -31,10 +31,22 @@ header {
     z-index: 20;
 }
 
+.logo{
+    height: 1.5em; 
+    width: 6em; 
+    position: relative; 
+    left: 2em;
+}
+
 ul li a {
     text-decoration: white;
     color: white;
 }
+
+.hamburger {
+    display: none;
+}
+
 
 .firstscreen {
     background-image: url("assignment/restaurant.jpg");
@@ -523,4 +535,141 @@ footer {
 }
 
 
-@media (............)
+@media only screen and (max-width: 280px) and (max-height: 600px) {
+
+    header {
+        padding: 2em;
+        width: 100%;
+        height: 12em;
+        z-index: 20;
+        background-color: #252830;
+        overflow-x: hidden;
+        align-items: center;
+    }
+
+    .logo{
+        height: 6em; 
+        width: 25em; 
+        position: relative; 
+        /* left: 2em; */
+        float: left;
+    }
+
+    .bar {
+        display: block;
+        width: 4em;
+        height: 0.5em;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: rgb(19, 137, 233);
+    
+    }
+
+    ul {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #252830;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    ul.active {
+        left: 0;
+    }
+
+    ul li {
+        /* margin: 2.5rem 0; */
+        margin: 2em;
+        font-size: 3em;
+    }
+
+    .hamburger {
+        /* position: relative; */
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    .thirdscreen {
+        background-image: url("assignment/checked_menu.jpg");
+        background-size: cover;
+        /* background-position-x: center;
+        /* background-position-y: center; */
+        width: 100%;
+        height: 100%;
+        z-index: -5;
+        position: fixed;
+        overflow-x: hidden;
+        background-repeat: no-repeat;
+    }
+
+    .firstscreen {
+        background-image: url("assignment/restaurant.jpg");
+        background-position: center;
+        background-position-y: 10em;
+        background-size: cover;
+        position: relative;
+        /* display: flex;
+        flex-direction: column; */
+        width: 80em;
+        height: 300em;
+        z-index: 2;
+        /* position: absolute; */
+    }
+     
+    .page1 {
+        display: flex;
+         /* flex-direction: column;   */
+    }   
+
+    .stickerflex {
+        /* position: absolute; */
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        padding-top: 50em;
+    }
+
+    .slogan{
+        /* position: relative; */
+        width: 100%;
+        padding-top: 40em;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 50em;
+        
+    }
+
+    .Because, .youre h1, .worthit h1{
+        position: relative;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        font-size: 10em;
+    }
+
+
+
+}
+
