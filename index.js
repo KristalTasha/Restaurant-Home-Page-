@@ -23,3 +23,18 @@ function closeMenu() {
 //     }
 // }
 //     )
+
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    // console.log(window.scrollY);
+
+    console.log(header.offsetHeight);
+
+    if(window.scrollY > header.offsetHeight + 70){
+        header.classList.add('stuck')
+    } else{
+        header.classList.remove('stuck')  
+    }
+})
+
