@@ -38,3 +38,17 @@ window.addEventListener('scroll', () => {
     }
 })
 
+
+
+var menubtn = document.getElementById("menubutton");
+var menupop = document.getElementById("menulist");
+
+
+// menubtn.onclick = function(){
+// menupop.classList.toggle("show")
+// }
+
+menubtn.onclick = function(){
+    menupop.classList.toggle("fade")
+    }
+

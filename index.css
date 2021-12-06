@@ -253,7 +253,7 @@ ul li a {
 }
 
 .button4 {
-    background-color: #FDB763;
+    background-color:rgb(221, 173, 82);
     color: white;
     font-size: 1em;
     height: 4.5em;
@@ -263,6 +263,84 @@ ul li a {
     top: 22em;
     left: 2.8em;
 }
+
+.button4:hover{
+    cursor: pointer;
+}
+
+.menuitems{
+   /* display: none; */
+    /* background-color: burlywood; */
+    background-image: url("/assignment/checked_menu.jpg");
+    /* align-items: center;
+    align-content: center; */
+    width: 35%;
+    height: 75% ;
+    position: relative;
+    float: right;
+    left: 23em;
+    bottom: 3em;
+    border-radius: 10px;
+    box-shadow: 15px 15px 15px rgb(44, 27, 10);
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    
+}
+
+/* .menuitems.show{
+    display: block;
+    animation: fadeIn 1.5s;
+    transition: ease-in-out 3s;
+    
+   } */
+
+   .menuitems.fade{
+    opacity: 0;
+   }
+
+ 
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+
+
+  .menu2{
+      position: relative;
+      align-self: center;
+      object-position: center;
+      /* background-color: burlywood; */
+      background-color: #FFFBF3;
+      opacity: 60%;
+      height: 90%;
+      width: 90%;
+      left: 5%;
+      top: 5%;
+      padding-top: 1em;
+      border-radius: 10px;
+  }
+
+  .menu2 h1, .menu2 h2, .menu2 p{
+      text-align: center;
+      align-self: center;
+      font-family: sans-serif;
+      color: black;
+  }
+
+  .menu2 h2{
+      font-size: 1em;
+  }
+
+  .menupic{
+      position: relative;
+      width: 40%;
+      height: 25%;
+      float: right;
+      bottom: 2em;
+      left: 3em;
+    
+  }
 
 .fifthscreen {
     display: flex;
@@ -1006,6 +1084,33 @@ footer {
             position: relative;
         }
 
+        .book {
+            /* background-color: #FDB763;
+            color: white; */
+            padding: 0;
+            /* border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative; */
+            font-size: 3em;
+            height: 6em;
+            /* width: 100%; */
+            top: 1em;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 4em;
+        }
+
+        .book a{
+            color: white;
+            text-decoration: none;
+           font-size: 5px;
+        }
+
+        .book p{
+            text-align: center;
+        }
 
         .bookatable {
             font-size: 7em;
