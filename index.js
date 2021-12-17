@@ -31,10 +31,10 @@ window.addEventListener('scroll', () => {
 
     console.log(header.offsetHeight);
 
-    if(window.scrollY > header.offsetHeight + 70){
+    if (window.scrollY > header.offsetHeight + 70) {
         header.classList.add('stuck')
-    } else{
-        header.classList.remove('stuck')  
+    } else {
+        header.classList.remove('stuck')
     }
 })
 
@@ -42,13 +42,14 @@ window.addEventListener('scroll', () => {
 
 var menubtn = document.getElementById("menubutton");
 var menupop = document.getElementById("menulist");
+var fourth = document.getElementById("themenu")
 
 
 // menubtn.onclick = function(){
 // menupop.classList.toggle("show")
 // }
 
-menubtn.onclick = function(){
+menubtn.onclick = function () {
     menupop.classList.toggle("fade")
-    }
-
+    fourth.classList.toggle("shrink")
+}
