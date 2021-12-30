@@ -1,4 +1,3 @@
 # Restaurant-Home-Page-
 SELECT Restaurant Website
-
-//mq_branch holds the media query breakpoints
+// Media queries completed on branches master and mq_branch
