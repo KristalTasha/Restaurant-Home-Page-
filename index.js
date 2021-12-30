@@ -1,5 +1,5 @@
 const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector("ul");
+const navMenu = document.querySelector(".navitems");
 
 hamburger.addEventListener("click", mobileMenu);
 
@@ -17,18 +17,9 @@ function closeMenu() {
     navMenu.classList.remove("active");
 }
 
-// $(window).scroll(function(){
-//     if($(window).scrollTop()){
-//         $("header")
-//     }
-// }
-//     )
-
 const header = document.querySelector('header');
 
 window.addEventListener('scroll', () => {
-    // console.log(window.scrollY);
-
     console.log(header.offsetHeight);
 
     if (window.scrollY > header.offsetHeight + 70) {
@@ -39,15 +30,9 @@ window.addEventListener('scroll', () => {
 })
 
 
-
 var menubtn = document.getElementById("menubutton");
 var menupop = document.getElementById("menulist");
 var fourth = document.getElementById("themenu")
-
-
-// menubtn.onclick = function(){
-// menupop.classList.toggle("show")
-// }
 
 menubtn.onclick = function () {
     menupop.classList.toggle("fade")

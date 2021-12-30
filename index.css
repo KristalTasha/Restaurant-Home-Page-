@@ -8,14 +8,17 @@
 
 }
 
-body {
+html {
     scroll-behavior: smooth;
+}
+
+body {
     overflow-y: scroll;
     overflow-x: hidden;
 
 }
 
-ul {
+.navitems {
     list-style: none;
     display: flex;
     gap: 3em;
@@ -43,15 +46,10 @@ header.stuck {
     background-color: #252830;
 }
 
-
 header a:hover {
     color: rgb(19, 137, 233);
 
 }
-
-/* header a:active{
-    transition: 0.7s ease;
-} */
 
 .logo {
     height: 1.5em;
@@ -60,7 +58,7 @@ header a:hover {
     left: 2em;
 }
 
-ul li a {
+.navitems li a {
     text-decoration: white;
     color: white;
 }
@@ -72,7 +70,7 @@ ul li a {
 
 .firstscreen {
     background-image: url("assignment/restaurant.jpg");
-    background-position: -18em;
+    background-size: cover;
     display: flex;
     width: 100%;
     height: 70em;
@@ -104,25 +102,25 @@ ul li a {
     font-weight: bold;
     color: white;
     font-family: sans-serif;
-    /* padding-top: 3.2em; */
     left: 0.7em;
 }
 
 .youreworthit {
-    /* display: none; */
     visibility: hidden;
 
 }
 
 .stickers {
     position: absolute;
-    padding-top: 42em;
+    align-self: center;
+    padding-top: 22em;
     left: 6em;
 }
 
-.stickerflex {
-    position: absolute;
-    display: flex;
+.stickergrid {
+    display: grid;
+    grid-template-rows: 21em;
+    grid-template-columns: 16em 16em 16em 16em;
     gap: 1.5em;
 }
 
@@ -159,10 +157,7 @@ ul li a {
     top: 1.3em
 }
 
-.sticker1 h1,
-.sticker2 h1,
-.sticker3 h1,
-.sticker4 h1 {
+.stamp {
     position: relative;
     left: 4em;
     font-family: sans-serif;
@@ -178,8 +173,6 @@ ul li a {
     display: flex;
     justify-content: center;
     background-image: url('/assignment/pattern.png');
-    /* background-size: cover; */
-    /* background-color: #FFFBF3; */
     width: 100%;
     height: 50em;
     z-index: 3;
@@ -209,7 +202,6 @@ ul li a {
     position: relative;
     object-position: center;
     top: 65%;
-    /* bottom: 0; */
 }
 
 .shortstory {
@@ -232,7 +224,7 @@ ul li a {
     background-position-x: center;
     background-position-y: center;
     width: 100%;
-    height: 40em;
+    height: 100%;
     z-index: -5;
     position: fixed;
     overflow-x: hidden;
@@ -277,6 +269,7 @@ ul li a {
 .button4 {
     background-color: rgb(221, 173, 82);
     color: white;
+    align-self: center;
     font-size: 1em;
     height: 4.5em;
     width: 13em;
@@ -291,16 +284,12 @@ ul li a {
 }
 
 .menuitems {
-    /* display: none; */
-    /* background-color: burlywood; */
     background-image: url("/assignment/checked_menu.jpg");
-    /* align-items: center;
-    align-content: center; */
     width: 35%;
     height: 75%;
     position: relative;
     float: right;
-    left: 23em;
+    left: 0;
     bottom: 3em;
     border-radius: 10px;
     box-shadow: 15px 15px 15px rgb(44, 27, 10);
@@ -308,13 +297,6 @@ ul li a {
     transition: opacity 0.75s ease-in-out;
 
 }
-
-/* .menuitems.show{
-    display: block;
-    animation: fadeIn 1.5s;
-    transition: ease-in-out 3s;
-    
-   } */
 
 .menuitems.fade {
     opacity: 0;
@@ -337,7 +319,6 @@ ul li a {
     position: relative;
     align-self: center;
     object-position: center;
-    /* background-color: burlywood; */
     background-color: #FFFBF3;
     opacity: 60%;
     height: 90%;
@@ -375,7 +356,6 @@ ul li a {
     display: flex;
     object-position: center;
     background-image: url('/assignment/pattern.png');
-    /* background-color: #FFFBF3; */
     width: 100%;
     height: 70em;
     top: 70em;
@@ -386,17 +366,12 @@ ul li a {
 
 .tips {
     align-self: center;
-    top: 10em;
-    position: absolute;
-    width: 100%;
-}
-
-.tiprow1 {
-    display: flex;
     justify-content: space-evenly;
-    height: 25em;
+    display: grid;
+    grid-template-rows: 25em 25em;
+    grid-template-columns: 15em 15em 15em;
+    grid-column-gap: 8em;
     width: 100%;
-    gap: 8em;
 }
 
 .fifthscreen .tip1,
@@ -439,13 +414,6 @@ ul li a {
 .tiphead {
     font-family: Roboto;
     font-size: 2em;
-}
-
-.tiprow2 {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    gap: 8em;
 }
 
 
@@ -564,7 +532,6 @@ h1 {
 
 input[type=text],
 textarea {
-    /* width: 50%; */
     resize: none;
     background-color: none;
     opacity: 99%;
@@ -703,6 +670,7 @@ footer {
 .contactus ul {
     display: flex;
     flex-direction: column;
+    gap: 1.5em;
     position: relative;
     top: 25em;
     float: left;
@@ -710,14 +678,14 @@ footer {
 }
 
 
-@media only screen and (max-width: 280px) {
+@media screen and (max-width: 280px) {
 
     header {
-        padding: 2em;
+        padding: 1.5em;
+        position: fixed;
         width: 100%;
-        height: 12em;
+        height: 2em;
         z-index: 20;
-        /* background-color: #252830; */
         overflow-x: hidden;
         align-items: center;
     }
@@ -727,17 +695,17 @@ footer {
     }
 
     .logo {
-        height: 6em;
-        width: 25em;
+        height: 1.5em;
+        width: 6em;
         position: relative;
-        /* left: 2em; */
+        left: 0.1em;
         float: left;
     }
 
     .bar {
         display: block;
-        width: 4em;
-        height: 0.5em;
+        width: 1.2em;
+        height: 0.1em;
         margin: 5px auto;
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
@@ -745,33 +713,37 @@ footer {
 
     }
 
-    ul {
+    .navitems {
         position: fixed;
-        left: -100%;
-        top: 5rem;
+        display: none;
+        padding: 0.6em;
+        gap: 2em;
         flex-direction: column;
         background-color: #252830;
-        width: 100%;
-        border-radius: 10px;
+        width: 280px;
         text-align: center;
-        transition: 0.3s;
+        transition: 0.7s;
         box-shadow:
             0 10px 27px rgba(0, 0, 0, 0.05);
     }
 
-    ul.active {
+    .navitems.active {
+        display: block;
+        transition: ease-in-out 0.5s;
         left: 0;
-        top: 10em;
+        top: 3em;
+        right: 0em;
+        padding-right: 0em;
     }
 
-    ul li {
-        /* margin: 2.5rem 0; */
-        margin: 2em;
-        font-size: 3em;
+    .navitems li {
+        height: 1.5em;
+        margin: 1em;
+        font-size: 0.8em;
+
     }
 
     .hamburger {
-        /* position: relative; */
         display: block;
         cursor: pointer;
     }
@@ -790,10 +762,9 @@ footer {
 
 
     .thirdscreen {
+        display: none;
         background-image: url("assignment/checked_menu.jpg");
         background-size: cover;
-        /* background-position-x: center;
-        /* background-position-y: center; */
         width: 100%;
         height: 100%;
         z-index: -5;
@@ -805,40 +776,26 @@ footer {
     .firstscreen {
         background-image: url("assignment/restaurant.jpg");
         background-position: center;
-        /* background-position-y: 10em; */
         background-size: cover;
+        background-repeat: no-repeat;
         position: relative;
-        /* display: flex;
-        flex-direction: column; */
-        width: 70em;
-        height: 420em;
+        width: 100%;
+        height: 110em;
         z-index: 2;
-        /* position: absolute; */
     }
 
     .page1 {
         display: flex;
-        /* flex-direction: column;   */
-    }
-
-    .stickerflex {
-        /* position: absolute; */
-        display: flex;
-        flex-direction: column;
-        gap: 10em;
-        padding-top: 50em;
     }
 
     .slogan {
-        /* position: relative; */
         width: 100%;
-        padding-top: 40em;
+        padding-top: 0.5em;
         align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 50em;
-
+        height: 25em;
     }
 
     .Because,
@@ -848,15 +805,35 @@ footer {
         margin: 0;
         padding: 0;
         left: 0;
-        font-size: 10em;
+        font-size: 2em;
+    }
+
+    .stickers {
+        align-self: center;
+        justify-self: center;
+        padding-top: 0em;
+        top: 20em;
+        margin-left: 5%;
+        margin-right: 5%;
+        left: 0em;
+    }
+
+
+
+    .stickergrid {
+        display: grid;
+        grid-template-rows: 20em 20em 20em 20em;
+        grid-template-columns: 100%;
+        grid-column-gap: 0.5em;
+        padding-top: 0em;
     }
 
     .sticker1,
     .sticker2,
     .sticker3,
     .sticker4 {
-        height: 70em;
-        width: 60em;
+        height: 20em;
+        width: 100%;
         padding: 2.5%;
 
     }
@@ -877,30 +854,27 @@ footer {
     .sticker2 p,
     .sticker3 p,
     .sticker4 p {
-        font-size: 4em;
-        padding-top: 1em;
+        font-size: 1em;
+        padding-top: 0.5em;
         font-style: 'Roboto';
     }
 
-    .sticker1 h1,
-    .sticker2 h1,
-    .sticker3 h1,
-    .sticker4 h1 {
+    .stamp {
         left: 0;
-        font-size: 4em;
-        padding-top: 0.5em;
+        font-size: 1em;
+        padding-top: 0.25em;
         text-align: center;
     }
 
     .secondscreen {
         top: -2em;
-        width: 70em;
-        height: 100em;
+        width: 100%;
+        height: 30em;
 
     }
 
     .discover {
-        font-size: 8em;
+        font-size: 1.5em;
         position: absolute;
     }
 
@@ -915,22 +889,23 @@ footer {
     .shortstory {
         object-position: center;
         word-wrap: break-word;
-        font-size: 4em;
+        font-size: 1em;
         height: 40%;
         width: 90%;
         font-family: 'Roboto';
-        padding-top: 10%;
+        padding-top: 8%;
     }
 
     .fourthscreen {
-        width: 70em;
-        height: 180em;
+        background-image: url("assignment/checked_menu.jpg");
+        background-size: cover;
+        background-position: inherit;
+        width: 100%;
+        height: 60em;
         top: 0;
         align-content: center;
         flex-direction: column;
         gap: 2em;
-        /* object-position: center;
-        justify-content: center; */
     }
 
     .what,
@@ -946,42 +921,45 @@ footer {
 
     }
 
+    .menubrief {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .what {
         text-align: center;
-        padding-top: 1.5em;
-        font-size: 11em;
+        padding-top: 0.5em;
+        font-size: 2em;
     }
 
     .enjoy {
-        font-size: 10em;
+        font-size: 2em;
     }
 
     .note {
-        font-size: 3em;
-        padding-top: 4.5em;
+        font-size: 1em;
+        padding-top: 1em;
     }
 
     .button4 {
-        font-size: 4em;
+        font-size: 0.8em;
         align-self: center;
-        top: 3em;
-        width: 600px;
-        height: 300px;
+        top: 2em;
+        width: 8em;
+        height: 2em;
         font-family: 'Roboto';
     }
 
 
     .menuitems {
-
-        /* background-image: url("/assignment/checked_menu.jpg");
-    */
         width: 90%;
-        height: 150em;
+        height: 36em;
         position: relative;
         align-self: center;
         float: right;
         left: 0em;
-        top: 15em;
+        top: 2em;
         bottom: 0em;
         border-radius: 10px;
         box-shadow: 15px 15px 15px rgb(44, 27, 10);
@@ -996,7 +974,9 @@ footer {
     }
 
     .fourthscreen.shrink {
-        height: 100em;
+        height: 25em;
+        background-size: cover;
+        background-position-x: 100em;
     }
 
     @keyframes fadeIn {
@@ -1017,72 +997,49 @@ footer {
         align-self: center;
         font-family: sans-serif;
         color: black;
-        font-size: 3em;
+
     }
 
-    .menu2 h2 {
-        font-size: 3em;
+    .menu2 h2,
+    p {
+        font-size: 1em;
     }
 
     .menu2 h1 {
-        font-size: 4em;
+        font-size: 1.5em;
         padding-bottom: 1em;
     }
 
     .menupic {
         position: relative;
         width: 50%;
-        height: 25%;
+        height: 12%;
         float: right;
-        bottom: 5em;
-        left: 3em;
+        bottom: 0.25em;
+        left: 1.5em;
 
     }
-
-
 
     .fifthscreen {
-        /* display: flex;
-        object-position: center;
-        background-color: #FFFBF3; */
-        flex-direction: column;
-        width: 70em;
-        height: 420em;
-        top: 25em;
+        width: 100%;
+        height: 110em;
+        top: 0em;
         z-index: 5;
         align-content: center;
-        /* align-items: center; */
         justify-content: center;
-
-        /* position: relative; */
-
     }
 
-    .tiprow1,
-    .tiprow2 {
-        /* display: flex;
-        justify-content: space-evenly; */
-        flex-direction: column;
-        /* align-self: center; */
-        position: relative;
-        height: 60em;
-        width: 70em;
-        gap: 10em;
-    }
-
-    .tiprow2 {
-        padding-top: 160em;
-    }
 
     .tips {
         top: 0;
-        align-self: center;
         align-items: center;
         position: relative;
         object-position: center;
-        width: 100%;
-        /* display: block; */
-        left: 20%;
+        left: none;
+        align-self: center;
+        display: grid;
+        grid-template-rows: 18em 18em 18em 18em 18em 18em;
+        grid-template-columns: 90%;
     }
 
     .fifthscreen .tip1,
@@ -1091,23 +1048,20 @@ footer {
     .tip4,
     .tip5,
     .tip6 {
-        /* justify-content: center;
-        text-align: center;
-        gap: 1em; */
         position: relative;
-        width: 60%;
+        width: 95%;
     }
 
     .fifthscreen p {
         font-family: sans-serif;
         word-wrap: break-word;
         padding-top: 0.6em;
-        font-size: 4em;
+        font-size: 1em;
     }
 
     .tiphead {
         font-family: Roboto;
-        font-size: 6em;
+        font-size: 1.5em;
     }
 
     .tip1img,
@@ -1116,57 +1070,39 @@ footer {
     .tip4img,
     .tip5img,
     .tip6img {
-        height: 15em;
-        width: 30em;
+        height: 5em;
+        width: 60%;
     }
 
 
     .sixthscreen {
         background-size: cover;
-        width: 70em;
-        height: 120em;
-        /* z-index: 6;
-            position: relative; */
-        top: 25em;
+        width: 100%;
+        height: 30em;
+        top: 0em;
     }
 
     .review {
-        font-size: 5em;
-        /* /* color: white; */
+        font-size: 1em;
         font-family: 'Roboto';
-        /* word-wrap: break-word;
-            text-align: center;
-            margin: 3em;  */
-        padding-top: 4em;
+        padding-top: 1em;
     }
 
     .rating {
-        /* display: flex;
-            justify-content: center; */
-        font-size: 5em;
-        /* width: 100%;
-            text-align: center;
-            top: 5em;
-            gap: 0.5em;
-            position: absolute; */
+        font-size: 1.5em;
     }
 
     .username {
-        font-size: 2.5em;
-        /* color: white; */
+        font-size: 0.6em;
         font-family: 'Roboto';
-        /* text-align: center; */
         top: 0;
         position: relative;
     }
 
-
     .seventhscreen {
-        /* background-image: url("assignment/bg5.jpg"); */
-        height: 200em;
-        width: 70em;
-        /* z-index: 7; */
-        top: 25em;
+        height: 50em;
+        width: 100%;
+        top: 0em;
         display: flex;
         position: relative;
         justify-content: space-evenly;
@@ -1180,43 +1116,39 @@ footer {
         display: flex;
         text-align: center;
         flex-direction: column;
-        gap: 1.5em;
-        height: 10em;
+        gap: 1em;
+        height: 5em;
         top: 0;
         position: relative;
     }
 
     .seventhscreen p {
-        font-size: 14em;
+        font-size: 2em;
     }
 
     .seventhscreen h1 {
-        font-size: 5em;
+        font-size: 1em;
     }
 
     .seventhscreen i {
         color: grey;
-        font-size: 8em;
+        font-size: 1.5em;
     }
 
 
     .eigthscreen {
-        height: 310em;
-        width: 70em;
-        top: 25em;
+        height: 60em;
+        width: 100%;
+        top: 0em;
         display: flex;
         position: relative;
         justify-content: space-evenly;
         flex-direction: column;
         gap: 0em;
-        padding: 5em;
+        padding: 2.5em;
     }
 
     .booking {
-        /* display: flex;
-            flex-direction: column;
-            justify-content: center;
-            object-position: center; */
         width: 100%;
         top: 0em;
         margin-left: 0;
@@ -1224,17 +1156,9 @@ footer {
     }
 
     .book {
-        /* background-color: #FDB763;
-            color: white; */
-        /* padding: 0.1; */
-        /* border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            position: relative; */
-        font-size: 3em;
-        height: 6em;
-        /* width: 100%; */
-        top: 1em;
+        font-size: 1em;
+        height: 2.5em;
+        top: 0.5em;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -1245,18 +1169,18 @@ footer {
 
         color: white;
         text-decoration: none;
-        font-size: 1.6em;
+        font-size: 1em;
         align-self: center;
     }
 
     .book p {
         text-align: center;
-        font-size: 1.5em;
+        font-size: 1em;
         align-self: center;
     }
 
     .bookatable {
-        font-size: 7em;
+        font-size: 2em;
         position: relative;
         text-align: center;
         font-family: 'Roboto';
@@ -1265,34 +1189,25 @@ footer {
 
     input[type=text],
     textarea {
-        font-size: 4em;
-        /* resize: none;
-            background-color: none;
-            opacity: 99%;
-            position: relative;
-            width: 100%;
-            border-color: grey;
-            border-width: 0.1em;
-            border-left: transparent;
-            border-right: transparent; */
-
+        font-size: 0.8em;
     }
 
     input[type=text] {
         background-color: transparent;
-        height: 6em;
+        height: 2.5em;
     }
 
     textarea {
         background-color: transparent;
-        height: 6em;
+        height: 4em;
         font-family: sans-serif;
     }
 
     .contact {
         width: 100%;
         position: relative;
-        margin-right: 0;
+        margin-right: 0em;
+        top: 2.5em;
     }
 
     .contactbrief {
@@ -1300,27 +1215,24 @@ footer {
         font-family: 'Roboto';
         top: 0em;
         text-align: center;
-        /* padding-top: 6em; */
-        /* word-wrap: break-word; */
-        font-size: 3.8em;
-        /* position: relative; */
+        font-size: 1em;
     }
 
     .contactus li {
         display: flex;
         flex-direction: column;
-        position: relative;
-
+        gap: 0.5em;
     }
 
     .contactus ul {
         background-color: transparent;
-        /* display: flex;
-            flex-direction: column;
-            position: relative; */
-        top: 0em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        top: 2em;
         float: none;
-        left: 0;
+        left: none;
     }
 
     .contactus li i {
@@ -1328,19 +1240,17 @@ footer {
     }
 
     .contactus li p {
-        font-size: 1.2em;
+        font-size: 1em;
+        margin-left: none;
     }
 
     footer {
         justify-content: center;
         display: flex;
         flex-direction: column-reverse;
-        /* gap: 8em; */
         align-items: center;
-        /* position: relative;
-            background-color: #252830; */
-        height: 80em;
-        width: 70em;
+        height: 15em;
+        width: 100%;
         top: 0;
         z-index: 9;
     }
@@ -1350,19 +1260,18 @@ footer {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 0.7em;
+        width: 80%;
+        gap: 0.5em;
         float: none;
         margin-right: 0;
         top: 0em;
-        /* align-self: center;
-            object-position: center; */
     }
 
     .smicons a {
-        padding: 0.2em;
+        padding: 0.1em;
         color: lightgray;
         text-decoration: none;
-        font-size: 8em;
+        font-size: 1.5em;
     }
 
     .footerlogo,
@@ -1370,24 +1279,37 @@ footer {
         display: none;
     }
 
+    .copyright {
+        top: 2em;
+        margin-left: 0em;
+    }
+
+    .multilogo {
+        width: 30em;
+        display: flex;
+        gap: 2em;
+        flex-direction: column;
+        position: relative;
+        word-wrap: none;
+    }
+
+
     .cc {
-        font-size: 4em;
+        font-size: 1em;
         text-align: center;
-        /* width: 100%; */
     }
 
 }
 
 
 
-@media only screen and (min-width: 281px) and (max-width: 426px) {
+@media screen and (min-width: 280px) and (max-width: 425px) {
 
     header {
-        padding: 2em;
+        padding: 0.5em;
         width: 100%;
-        height: 12em;
+        height: 3em;
         z-index: 20;
-        /* background-color: #252830; */
         overflow-x: hidden;
         align-items: center;
     }
@@ -1397,17 +1319,16 @@ footer {
     }
 
     .logo {
-        height: 6em;
-        width: 25em;
+        height: 1.6em;
+        width: 5.5em;
         position: relative;
-        /* left: 2em; */
         float: left;
     }
 
     .bar {
         display: block;
-        width: 4em;
-        height: 0.5em;
+        width: 2em;
+        height: 0.2em;
         margin: 5px auto;
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
@@ -1415,33 +1336,33 @@ footer {
 
     }
 
-    ul {
+    .navitems {
         position: fixed;
-        left: -100%;
-        top: 5rem;
+        display: none;
+        top: 1.5em;
+        padding: 0.8em;
         flex-direction: column;
         background-color: #252830;
         width: 100%;
-        border-radius: 10px;
         text-align: center;
         transition: 0.3s;
         box-shadow:
             0 10px 27px rgba(0, 0, 0, 0.05);
     }
 
-    ul.active {
+    .navitems.active {
+        display: block;
         left: 0;
-        top: 12em;
+        width: 100%;
+        top: 2.5em;
     }
 
-    ul li {
-        /* margin: 2.5rem 0; */
-        margin: 2em;
-        font-size: 3em;
+    .navitems li {
+        margin: 5%;
+        font-size: 1em;
     }
 
     .hamburger {
-        /* position: relative; */
         display: block;
         cursor: pointer;
     }
@@ -1460,10 +1381,9 @@ footer {
 
 
     .thirdscreen {
+        display: none;
         background-image: url("assignment/checked_menu.jpg");
         background-size: cover;
-        /* background-position-x: center;
-        /* background-position-y: center; */
         width: 100%;
         height: 100%;
         z-index: -5;
@@ -1475,33 +1395,25 @@ footer {
     .firstscreen {
         background-image: url("assignment/restaurant.jpg");
         background-position: center;
-        /* background-position-y: 10em; */
         background-size: cover;
         position: relative;
-        /* display: flex;
-        flex-direction: column; */
-        width: 108em;
-        height: 550em;
+        width: 100%;
+        height: 160em;
         z-index: 2;
-        /* position: absolute; */
     }
 
     .page1 {
         display: flex;
-        /* flex-direction: column;   */
     }
 
-
-
     .slogan {
-        /* position: relative; */
         width: 100%;
-        padding-top: 40em;
+        padding-top: 5em;
         align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 50em;
+        height: 25em;
 
     }
 
@@ -1510,7 +1422,7 @@ footer {
         margin: 0;
         padding: 0;
         left: 0;
-        font-size: 10em;
+        font-size: 2.5em;
     }
 
     .youre h1,
@@ -1519,38 +1431,38 @@ footer {
     }
 
     .youreworthit h1 {
-        /* display: block; */
         visibility: visible;
         position: relative;
         color: white;
         font-family: sans-serif;
-        /* margin: 0;
-        padding: 0;
-        left: 0; */
-        font-size: 10em;
+        font-size: 2.5em;
 
     }
 
+    .stickers {
+        align-self: center;
+        padding-top: 0em;
+        top: 20em;
+        left: 1em;
+    }
 
-    .stickerflex {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: 10em;
-        padding-top: 50em;
+    .stickergrid {
+        display: grid;
+        grid-template-rows: 28em 28em 28em 28em;
+        grid-template-columns: 100%;
+        gap: 2.5em;
         justify-self: center;
-
+        padding-top: 2.5em;
     }
 
     .sticker1,
     .sticker2,
     .sticker3,
     .sticker4 {
-        height: 100em;
-        width: 95em;
+        height: 28em;
+        width: 96%;
         padding: 1.5%;
-        left: -5em;
-
+        left: 0em;
     }
 
     .sticker1pic,
@@ -1559,6 +1471,658 @@ footer {
     .sticker4pic {
         width: 100%;
         height: 70%;
+        position: relative;
+        padding: 0.1em;
+        margin-top: 0em;
+    }
+
+    .sticker1 p,
+    .sticker2 p,
+    .sticker3 p,
+    .sticker4 p {
+        font-size: 1em;
+        padding-top: 0.5em;
+        font-style: 'Roboto';
+    }
+
+    .foodstamp {
+        display: none;
+    }
+
+    .stamp {
+        display: none;
+        left: 0;
+        font-size: 1.5em;
+        padding-top: 0.2em;
+        text-align: center;
+    }
+
+    .stickerprice {
+        display: block;
+        font-size: 1em;
+    }
+
+
+
+    .secondscreen {
+        top: -2em;
+        width: 100%;
+        height: 45em;
+    }
+
+    .discover {
+        font-size: 2.5em;
+        position: absolute;
+    }
+
+    .discoverpic {
+        width: 75%;
+        height: 15%;
+        position: relative;
+        object-position: center;
+        top: 85%;
+    }
+
+    .shortstory {
+        object-position: center;
+        word-wrap: break-word;
+        font-size: 1.5em;
+        height: 40%;
+        width: 90%;
+        font-family: 'Roboto';
+        padding-top: 10%;
+    }
+
+    .fourthscreen {
+        background-image: url("assignment/checked_menu.jpg");
+        background-size: cover;
+        background-position: inherit;
+        width: 100%;
+        height: 55em;
+        top: 0;
+        align-content: center;
+        flex-direction: column;
+        gap: 1em;
+
+    }
+
+    .what,
+    .enjoy,
+    .note,
+    .button4 {
+        position: relative;
+        left: 0;
+        top: 0;
+        text-align: center;
+        word-wrap: break-word;
+        align-items: center;
+
+    }
+
+    .what {
+        text-align: center;
+        padding-top: 1em;
+        font-size: 3em;
+    }
+
+    .enjoy {
+        font-size: 2em;
+    }
+
+    .note {
+        font-size: 1em;
+        padding-top: 1em;
+    }
+
+    .button4 {
+        font-size: 1em;
+        align-self: center;
+        top: 1em;
+        width: 8em;
+        height: 3em;
+        font-family: 'Roboto';
+    }
+
+    .menuitems {
+        width: 90%;
+        height: 30em;
+        position: relative;
+        align-self: center;
+        float: right;
+        left: 0em;
+        top: 5em;
+        bottom: 0em;
+        border-radius: 10px;
+        box-shadow: 15px 15px 15px rgb(44, 27, 10);
+        opacity: 1;
+        transition: opacity 0.75s ease-in-out;
+
+    }
+
+
+    .menuitems.fade {
+        opacity: 0;
+    }
+
+    .fourthscreen.shrink {
+        height: 20em;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+
+    .menu2 h1,
+    .menu2 h2,
+    .menu2 p {
+        text-align: center;
+        align-self: center;
+        font-family: sans-serif;
+        color: black;
+
+    }
+
+    .menu2 h2 {
+        font-size: 1em;
+    }
+
+    .menu2 h1 {
+        font-size: 1.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .menupic {
+        position: relative;
+        width: 50%;
+        height: 25%;
+        float: right;
+        bottom: 5em;
+        left: 3em;
+
+    }
+
+    .menubrief {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+
+    .fifthscreen {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100em;
+        top: 0em;
+        z-index: 5;
+        align-content: center;
+        justify-content: center;
+
+    }
+
+    .tips {
+        top: 0em;
+        justify-self: center;
+        align-self: center;
+        align-items: center;
+        position: relative;
+        object-position: center;
+        width: 100%;
+        left: 10%;
+        display: grid;
+        grid-template-rows: 15em 15em 15em 15em 15em 15em;
+        grid-template-columns: 100%;
+        grid-row-gap: 1em;
+        width: 100%;
+    }
+
+    .fifthscreen .tip1,
+    .tip2,
+    .tip3,
+    .tip4,
+    .tip5,
+    .tip6 {
+        position: relative;
+        width: 80%;
+    }
+
+    .fifthscreen p {
+        font-family: sans-serif;
+        word-wrap: break-word;
+        padding-top: 0.6em;
+        font-size: 1em;
+    }
+
+    .tiphead {
+        font-family: Roboto;
+        font-size: 1.5em;
+    }
+
+    .tip1img,
+    .tip2img,
+    .tip3img,
+    .tip4img,
+    .tip5img,
+    .tip6img {
+        height: 6em;
+        width: 60%;
+    }
+
+
+    .sixthscreen {
+        background-size: cover;
+        width: 100%;
+        height: 35em;
+        top: 0em;
+    }
+
+    .review {
+        font-size: 1.5em;
+        font-family: 'Roboto';
+        padding-top: 2em;
+    }
+
+    .rating {
+        font-size: 1.5em;
+    }
+
+    .username {
+        font-size: 1em;
+        font-family: 'Roboto';
+        top: 0;
+        position: relative;
+    }
+
+
+    .seventhscreen {
+        height: 60em;
+        width: 100%;
+        top: 0em;
+        display: flex;
+        position: relative;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .dishes,
+    .drinks,
+    .clients,
+    .likes {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        gap: 0.5em;
+        height: 4em;
+        top: 0;
+        position: relative;
+    }
+
+    .seventhscreen p {
+        font-size: 4.5em;
+    }
+
+    .seventhscreen h1 {
+        font-size: 1em;
+    }
+
+    .seventhscreen i {
+        color: grey;
+        font-size: 2em;
+    }
+
+
+    .eigthscreen {
+        height: 80em;
+        width: 100%;
+        top: 0em;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        gap: 0em;
+        padding: 2em;
+    }
+
+    .booking {
+        width: 100%;
+        top: 0em;
+        margin-left: 0;
+        position: relative;
+    }
+
+    .book {
+        font-size: 2em;
+        height: 2.5em;
+        top: 0.5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.8em;
+    }
+
+    .book a {
+
+        color: white;
+        text-decoration: none;
+        font-size: 0.8em;
+        align-self: center;
+    }
+
+    .book p {
+        text-align: center;
+        font-size: 0.8em;
+        align-self: center;
+    }
+
+    .bookatable {
+        font-size: 2.5em;
+        position: relative;
+        text-align: center;
+        font-family: 'Roboto';
+        margin-bottom: 1em;
+    }
+
+    input[type=text],
+    textarea {
+        font-size: 1em;
+    }
+
+    input[type=text] {
+        background-color: transparent;
+        height: 3em;
+    }
+
+    textarea {
+        background-color: transparent;
+        height: 6em;
+        font-family: sans-serif;
+    }
+
+    .contact {
+        width: 100%;
+        height: 30em;
+        position: relative;
+        margin-right: 0em;
+    }
+
+    .contactbrief {
+        color: white;
+        font-family: 'Roboto';
+        top: 2em;
+        text-align: center;
+        padding-top: 2em;
+        font-size: 1em;
+    }
+
+    .contactus li {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.3em;
+
+
+    }
+
+    .contactus ul {
+        background-color: transparent;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        top: 5em;
+        left: none;
+    }
+
+
+    .contactus li i {
+        font-size: 1.5em;
+    }
+
+    .contactus li p {
+        font-size: 1em;
+    }
+
+    footer {
+        justify-content: center;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 0em;
+        align-items: center;
+        height: 25em;
+        width: 100%;
+        top: 0;
+        z-index: 9;
+    }
+
+    .smicons {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.7em;
+        float: none;
+        margin-right: 0;
+        top: 0em;
+        width: 70%;
+    }
+
+    .smicons a {
+        padding: 0.2em;
+        color: lightgray;
+        text-decoration: none;
+        font-size: 1.5em;
+
+    }
+
+    .footerlogo {
+        display: none;
+    }
+
+    .multilogo {
+        width: 15em;
+        display: flex;
+        gap: 0.5em;
+        flex-direction: column;
+        position: relative;
+        word-wrap: none;
+    }
+
+    .cc,
+    .designer {
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+
+}
+
+
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+
+    header {
+        padding: 1%;
+        width: 100%;
+        height: 3em;
+        z-index: 20;
+        align-items: center;
+    }
+
+    header a:hover {
+        color: rgb(19, 137, 233);
+    }
+
+    .logo {
+        height: 2em;
+        width: 7em;
+        position: relative;
+        left: 1em;
+        float: left;
+    }
+
+    .bar {
+        display: block;
+        width: 2em;
+        height: 0.2em;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: rgb(19, 137, 233);
+
+    }
+
+    .navitems {
+        position: fixed;
+        display: none;
+        top: 0.5em;
+        padding: 1em;
+        flex-direction: column;
+        background-color: #252830;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .navitems.active {
+        display: block;
+        left: 0;
+        top: 2.8em;
+        width: 100%;
+    }
+
+    .navitems li {
+        margin: 3%;
+        font-size: 1.2em;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    .thirdscreen {
+        display: none;
+        background-image: url("assignment/checked_menu.jpg");
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -5;
+        position: fixed;
+        overflow-x: hidden;
+        background-repeat: no-repeat;
+    }
+
+    .firstscreen {
+        background-image: url("assignment/restaurant.jpg");
+        background-position: center;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        width: 100%;
+        height: 200em;
+        z-index: 2;
+    }
+
+    .page1 {
+        display: flex;
+    }
+
+    .slogan {
+        width: 100%;
+        padding-top: 5em;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 30em;
+
+    }
+
+    .Because {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        font-size: 2.5em;
+    }
+
+    .youre h1,
+    .worthit h1 {
+        display: none;
+    }
+
+    .youreworthit h1 {
+        visibility: visible;
+        position: relative;
+        text-align: center;
+        word-wrap: break-word;
+        margin-left: 2%;
+        margin-right: 2%;
+        color: white;
+        font-family: sans-serif;
+        font-size: 6em;
+    }
+
+    .stickers {
+        align-self: center;
+        padding-top: 0em;
+        width: 100%;
+        padding-right: 2%;
+        padding-left: 2%;
+        justify-content: center;
+        top: 28em;
+        left: 0%;
+    }
+
+    
+    .stickergrid {
+        display: grid;
+        grid-template-rows: 36em 36em 36em 36em;
+        grid-template-columns: 100%;
+        gap: 3%;
+        justify-self: center;
+        padding-top: 2.5em;
+    }
+
+    .sticker1,
+    .sticker2,
+    .sticker3,
+    .sticker4 {
+        height: 36em;
+        width: 96%;
+        padding: 1.5%;
+        left: 0em;
+    }
+
+    .sticker1pic,
+    .sticker2pic,
+    .sticker3pic,
+    .sticker4pic {
+        width: 100%;
+        height: 65%;
         position: relative;
         padding: 0.3em;
         margin-top: 0em;
@@ -1569,57 +2133,57 @@ footer {
     .sticker2 p,
     .sticker3 p,
     .sticker4 p {
-        font-size: 4em;
-        padding-top: 1em;
+        font-size: 1.5em;
+        padding-top: 0.8em;
         font-style: 'Roboto';
     }
 
     .foodstamp {
-        display: none;
+        display: block;
     }
 
-    .sticker1 h1,
-    .sticker2 h1,
-    .sticker3 h1,
-    .sticker4 h1 {
-        display: none;
+    .stamp {
+        display: block;
         left: 0;
-        font-size: 4em;
-        padding-top: 0.5em;
+        font-size: 1.5em;
+        padding-top: 2%;
         text-align: center;
     }
 
     .stickerprice {
-        display: block;
-        font-size: 5em;
+        display: none;
+        font-size: 1em;
+        text-align: center;
+        word-wrap: break-word;
+        width: 100%;
     }
 
 
 
     .secondscreen {
         top: -2em;
-        width: 108em;
-        height: 100em;
+        width: 100%;
+        height: 40em;
 
     }
 
     .discover {
-        font-size: 8em;
+        font-size: 2em;
         position: absolute;
     }
 
     .discoverpic {
-        width: 75%;
-        height: 15%;
+        width: 80%;
+        height: 25%;
         position: relative;
         object-position: center;
-        top: 85%;
+        top: 75%;
     }
 
     .shortstory {
         object-position: center;
         word-wrap: break-word;
-        font-size: 4em;
+        font-size: 1.5em;
         height: 40%;
         width: 90%;
         font-family: 'Roboto';
@@ -1627,14 +2191,21 @@ footer {
     }
 
     .fourthscreen {
-        width: 108em;
-        height: 160em;
-        top: 0;
+        background-image: url("assignment/checked_menu.jpg");
+        background-size: cover;
+        background-position: inherit;
+        width: 100%;
+        height: 70em;
+        top: -3em;
         align-content: center;
         flex-direction: column;
         gap: 2em;
-        /* object-position: center;
-        justify-content: center; */
+    }
+
+    .menubrief {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .what,
@@ -1653,38 +2224,38 @@ footer {
     .what {
         text-align: center;
         padding-top: 1.5em;
-        font-size: 11em;
+        font-size: 3em;
     }
 
     .enjoy {
-        font-size: 10em;
+        font-size: 3.5em;
     }
 
     .note {
-        font-size: 3em;
-        padding-top: 4.5em;
+        font-size: 1em;
+        padding-top: 2em;
     }
 
     .button4 {
-        font-size: 4em;
+        font-size: 1em;
+        text-align: center;
         align-self: center;
         top: 3em;
-        width: 12em;
-        height: 8em;
+        padding: 1em;
+        width: 10em;
         font-family: 'Roboto';
     }
 
     .menuitems {
-
-        /* background-image: url("/assignment/checked_menu.jpg");
-    */
+        background-image: none;
+        background-color: rgb(26, 16, 12);
         width: 90%;
-        height: 150em;
+        height: 35em;
         position: relative;
         align-self: center;
         float: right;
         left: 0em;
-        top: 15em;
+        top: 3em;
         bottom: 0em;
         border-radius: 10px;
         box-shadow: 15px 15px 15px rgb(44, 27, 10);
@@ -1699,7 +2270,7 @@ footer {
     }
 
     .fourthscreen.shrink {
-        height: 80em;
+        height: 35em;
     }
 
     @keyframes fadeIn {
@@ -1720,64 +2291,36 @@ footer {
         align-self: center;
         font-family: sans-serif;
         color: black;
-        font-size: 3em;
+
     }
 
     .menu2 h2 {
-        font-size: 3em;
+        font-size: 1.5em;
     }
 
     .menu2 h1 {
-        font-size: 4em;
+        font-size: 2em;
         padding-bottom: 1em;
     }
 
     .menupic {
         position: relative;
-        width: 50%;
+        width: 30%;
         height: 25%;
         float: right;
-        bottom: 5em;
+        bottom: 2.8em;
         left: 3em;
-
     }
-
-
 
     .fifthscreen {
-        display: flex;
-        /* object-position: center;
-        background-color: #FFFBF3; */
-        flex-direction: column;
-        width: 108em;
-        height: 420em;
-        top: 25em;
+        width: 100%;
+        height: 50em;
+        top: -3em;
         z-index: 5;
         align-content: center;
-        /* align-items: center; */
         justify-content: center;
-
-        /* position: relative; */
-
     }
 
-    .tiprow1,
-    .tiprow2 {
-        /* display: flex;
-        justify-content: space-evenly; */
-        flex-direction: column;
-        align-self: center;
-        position: relative;
-        left: 10em;
-        height: 60em;
-        width: 70em;
-        gap: 10em;
-        
-    }
-
-    .tiprow2 {
-        padding-top: 160em;
-    }
 
     .tips {
         top: 0;
@@ -1785,9 +2328,12 @@ footer {
         align-items: center;
         position: relative;
         object-position: center;
+        display: grid;
+        grid-template-rows: 20em 20em;
+        grid-template-columns: 20% 20% 20%;
+        grid-column-gap: 13%;
+        grid-row-gap: 8%;
         width: 100%;
-        /* display: block; */
-        left: 20%;
     }
 
     .fifthscreen .tip1,
@@ -1796,23 +2342,20 @@ footer {
     .tip4,
     .tip5,
     .tip6 {
-        /* justify-content: center;
-        text-align: center;
-        gap: 1em; */
         position: relative;
-        width: 60%;
+        width: 100%;
     }
 
     .fifthscreen p {
         font-family: sans-serif;
         word-wrap: break-word;
-        padding-top: 0.6em;
-        font-size: 4em;
+        padding-top: 5%;
+        font-size: 1em;
     }
 
     .tiphead {
-        font-family: Roboto;
-        font-size: 6em;
+        font-family: 'Roboto';
+        font-size: 1.5em;
     }
 
     .tip1img,
@@ -1821,57 +2364,38 @@ footer {
     .tip4img,
     .tip5img,
     .tip6img {
-        height: 15em;
-        width: 30em;
+        height: 20%;
+        width: 80%;
     }
-
 
     .sixthscreen {
         background-size: cover;
-        width: 108em;
-        height: 120em;
-        /* z-index: 6;
-            position: relative; */
-        top: 25em;
+        width: 100%;
+        height: 35em;
+        top: -4em;
     }
 
     .review {
-        font-size: 5em;
-        /* /* color: white; */
+        font-size: 1.5em;
         font-family: 'Roboto';
-        /* word-wrap: break-word;
-            text-align: center;
-            margin: 3em;  */
-        padding-top: 4em;
+        padding-top: 2.5em;
     }
 
     .rating {
-        /* display: flex;
-            justify-content: center; */
-        font-size: 5em;
-        /* width: 100%;
-            text-align: center;
-            top: 5em;
-            gap: 0.5em;
-            position: absolute; */
+        font-size: 1.5em;
     }
 
     .username {
-        font-size: 2.5em;
-        /* color: white; */
+        font-size: 1em;
         font-family: 'Roboto';
-        /* text-align: center; */
         top: 0;
         position: relative;
     }
 
-
     .seventhscreen {
-        /* background-image: url("assignment/bg5.jpg"); */
-        height: 200em;
-        width: 108em;
-        /* z-index: 7; */
-        top: 25em;
+        height: 60em;
+        width: 100%;
+        top: -4em;
         display: flex;
         position: relative;
         justify-content: space-evenly;
@@ -1885,43 +2409,40 @@ footer {
         display: flex;
         text-align: center;
         flex-direction: column;
-        gap: 1.5em;
-        height: 10em;
+        gap: 1em;
+        height: 5em;
         top: 0;
         position: relative;
     }
 
     .seventhscreen p {
-        font-size: 14em;
+        font-size: 4em;
     }
 
     .seventhscreen h1 {
-        font-size: 5em;
+        font-size: 1.5em;
     }
 
     .seventhscreen i {
         color: grey;
-        font-size: 8em;
+        font-size: 2em;
     }
 
 
     .eigthscreen {
-        height: 310em;
-        width: 108em;
-        top: 25em;
+        background-size: cover;
+        height: 80em;
+        width: 100%;
+        top: 0em;
         display: flex;
         position: relative;
         justify-content: space-evenly;
         flex-direction: column;
         gap: 0em;
-        padding: 5em;
+        padding: 5%;
     }
 
     .booking {
-        /* display: flex;
-            flex-direction: column;
-            justify-content: center;
-            object-position: center; */
         width: 100%;
         top: 0em;
         margin-left: 0;
@@ -1929,16 +2450,9 @@ footer {
     }
 
     .book {
-        /* background-color: #FDB763;
-            color: white; */
-        /* padding: 0.1; */
-        /* border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            position: relative; */
-        font-size: 3em;
-        height: 6em;
-        /* width: 100%; */
+        font-size: 1.5em;
+        height: 3.5em;
+        width: 100%;
         top: 1em;
         display: flex;
         flex-direction: row;
@@ -1950,18 +2464,18 @@ footer {
 
         color: white;
         text-decoration: none;
-        font-size: 1.6em;
+        font-size: 1.2em;
         align-self: center;
     }
 
     .book p {
         text-align: center;
-        font-size: 1.5em;
+        font-size: 1.2em;
         align-self: center;
     }
 
     .bookatable {
-        font-size: 7em;
+        font-size: 3.5em;
         position: relative;
         text-align: center;
         font-family: 'Roboto';
@@ -1970,22 +2484,12 @@ footer {
 
     input[type=text],
     textarea {
-        font-size: 4em;
-        /* resize: none;
-            background-color: none;
-            opacity: 99%;
-            position: relative;
-            width: 100%;
-            border-color: grey;
-            border-width: 0.1em;
-            border-left: transparent;
-            border-right: transparent; */
-
+        font-size: 1.2em;
     }
 
     input[type=text] {
         background-color: transparent;
-        height: 6em;
+        height: 3em;
     }
 
     textarea {
@@ -2005,25 +2509,23 @@ footer {
         font-family: 'Roboto';
         top: 0em;
         text-align: center;
-        /* padding-top: 6em; */
-        /* word-wrap: break-word; */
-        font-size: 3.8em;
-        /* position: relative; */
+        font-size: 1.5em;
     }
 
     .contactus li {
         display: flex;
         flex-direction: column;
         position: relative;
+        width: 100%;
 
     }
 
     .contactus ul {
         background-color: transparent;
-        /* display: flex;
-            flex-direction: column;
-            position: relative; */
-        top: 0em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        top: 3em;
         float: none;
         left: 0;
     }
@@ -2033,19 +2535,16 @@ footer {
     }
 
     .contactus li p {
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 
     footer {
         justify-content: center;
         display: flex;
         flex-direction: column-reverse;
-        /* gap: 8em; */
         align-items: center;
-        /* position: relative;
-            background-color: #252830; */
-        height: 80em;
-        width: 108em;
+        height: 20em;
+        width: 100%;
         top: 0;
         z-index: 9;
     }
@@ -2054,50 +2553,54 @@ footer {
         position: relative;
         display: flex;
         flex-wrap: wrap;
+        width: 80%;
         justify-content: center;
         gap: 0.7em;
         float: none;
         margin-right: 0;
         top: 0em;
-        /* align-self: center;
-            object-position: center; */
     }
 
     .smicons a {
         padding: 0.2em;
         color: lightgray;
         text-decoration: none;
-        font-size: 8em;
+        font-size: 3em;
     }
 
-    .footerlogo,
-    .designer {
+    .footerlogo {
         display: none;
     }
 
-    .cc {
-        font-size: 4em;
+    .copyright {
+        margin-left: 0;
         text-align: center;
-        /* width: 100%; */
+        align-self: center;
+        width: 100%;
+        top: 3em;
     }
 
+    .designer {
+        display: block;
+    }
 
-
+    .cc {
+        font-size: 1.5em;
+        text-align: center;
+    }
 
 
 }
 
 
 
-@media only screen and (min-width: 426px) and (max-width: 769px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
 
     header {
-        padding: 2em;
+        padding: 1%;
         width: 100%;
-        height: 12em;
+        height: 3em;
         z-index: 20;
-        /* background-color: #252830; */
-        overflow-x: hidden;
         align-items: center;
     }
 
@@ -2106,17 +2609,17 @@ footer {
     }
 
     .logo {
-        height: 6em;
-        width: 25em;
+        height: 2em;
+        width: 7em;
         position: relative;
-        /* left: 2em; */
+        left: 1em;
         float: left;
     }
 
     .bar {
         display: block;
-        width: 4em;
-        height: 0.5em;
+        width: 2em;
+        height: 0.2em;
         margin: 5px auto;
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
@@ -2124,33 +2627,32 @@ footer {
 
     }
 
-    ul {
+    .navitems {
         position: fixed;
         left: -100%;
-        top: 5rem;
+        top: 0.5em;
+        padding: 1em;
         flex-direction: column;
         background-color: #252830;
         width: 100%;
-        border-radius: 10px;
         text-align: center;
         transition: 0.3s;
         box-shadow:
             0 10px 27px rgba(0, 0, 0, 0.05);
     }
 
-    ul.active {
+    .navitems.active {
         left: 0;
-        top: 12em;
+        top: 2.9em;
+        width: 100%;
     }
 
-    ul li {
-        /* margin: 2.5rem 0; */
-        margin: 2em;
-        font-size: 3em;
+    .navitems li {
+        margin: 0.5%;
+        font-size: 1.2em;
     }
 
     .hamburger {
-        /* position: relative; */
         display: block;
         cursor: pointer;
     }
@@ -2169,10 +2671,9 @@ footer {
 
 
     .thirdscreen {
+        display: none;
         background-image: url("assignment/checked_menu.jpg");
         background-size: cover;
-        /* background-position-x: center;
-        /* background-position-y: center; */
         width: 100%;
         height: 100%;
         z-index: -5;
@@ -2184,34 +2685,26 @@ footer {
     .firstscreen {
         background-image: url("assignment/restaurant.jpg");
         background-position: center;
-        /* background-position-y: 10em; */
         background-size: cover;
         background-position: center;
         position: relative;
-        /* display: flex;
-        flex-direction: column; */
-        width: 3080px;
-        height: 150em;
+        width: 100%;
+        height: 60em;
         z-index: 2;
-        /* position: absolute; */
     }
 
     .page1 {
         display: flex;
-        /* flex-direction: column;   */
     }
 
-
-
     .slogan {
-        /* position: relative; */
         width: 100%;
-        padding-top: 40em;
+        padding-top: 5em;
         align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 50em;
+        height: 30em;
 
     }
 
@@ -2220,7 +2713,7 @@ footer {
         margin: 0;
         padding: 0;
         left: 0;
-        font-size: 10em;
+        font-size: 2.5em;
     }
 
     .youre h1,
@@ -2229,35 +2722,45 @@ footer {
     }
 
     .youreworthit h1 {
-        /* display: block; */
         visibility: visible;
         position: relative;
+        text-align: center;
+        word-wrap: break-word;
+        margin-left: 2%;
+        margin-right: 2%;
         color: white;
         font-family: sans-serif;
-        /* margin: 0;
-        padding: 0;
-        left: 0; */
-        font-size: 10em;
-
+        font-size: 6em;
     }
 
+    .stickers {
+        align-self: center;
+        padding-top: 0em;
+        width: 100%;
+        padding-right: 2%;
+        padding-left: 2%;
+        justify-content: center;
+        top: 28em;
+        left: 0%;
+    }
 
-    .stickerflex {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        gap: 2em;
-        padding-top: 50em;
+    .stickergrid {
+        display: grid;
+        grid-template-rows: 10em;
+        grid-template-columns: 23.125% 23.125% 23.125% 23.125%;
+        gap: 2.5%;
         justify-self: center;
+        padding-top: 4em;
 
     }
+
 
     .sticker1,
     .sticker2,
     .sticker3,
     .sticker4 {
-        height: 40em;
-        width: 38em;
+        height: 18em;
+        width: 100%;
         padding: 0.3%;
         left: 0em;
 
@@ -2268,7 +2771,7 @@ footer {
     .sticker3pic,
     .sticker4pic {
         width: 100%;
-        height: 70%;
+        height: 60%;
         position: relative;
         padding: 0.3em;
         margin-top: 0em;
@@ -2279,57 +2782,57 @@ footer {
     .sticker2 p,
     .sticker3 p,
     .sticker4 p {
-        font-size: 1.5em;
-        padding-top: 1em;
+        font-size: 1em;
+        padding-top: 0.8em;
         font-style: 'Roboto';
     }
 
     .foodstamp {
-        display: none;
+        display: block;
     }
 
-    .sticker1 h1,
-    .sticker2 h1,
-    .sticker3 h1,
-    .sticker4 h1 {
-        display: none;
+    .stamp {
+        display: block;
         left: 0;
-        font-size: 4em;
-        padding-top: 0.5em;
+        font-size: 1em;
+        padding-top: 2%;
         text-align: center;
     }
 
     .stickerprice {
-        display: block;
-        font-size: 5em;
+        display: none;
+        font-size: 1em;
+        text-align: center;
+        word-wrap: break-word;
+        width: 100%;
     }
 
 
 
     .secondscreen {
         top: -2em;
-        width: 3080px;
-        height: 110em;
+        width: 100%;
+        height: 40em;
 
     }
 
     .discover {
-        font-size: 8em;
+        font-size: 2em;
         position: absolute;
     }
 
     .discoverpic {
-        width: 75%;
+        width: 80%;
         height: 25%;
         position: relative;
         object-position: center;
-        top: 70%;
+        top: 75%;
     }
 
     .shortstory {
         object-position: center;
         word-wrap: break-word;
-        font-size: 4em;
+        font-size: 1.5em;
         height: 40%;
         width: 90%;
         font-family: 'Roboto';
@@ -2337,14 +2840,21 @@ footer {
     }
 
     .fourthscreen {
-        width: 3080px;
-        height: 180em;
-        top: 0;
+        background-image: url("assignment/checked_menu.jpg");
+        background-size: cover;
+        background-position: inherit;
+        width: 100%;
+        height: 70em;
+        top: -3em;
         align-content: center;
         flex-direction: column;
         gap: 2em;
-        /* object-position: center;
-        justify-content: center; */
+    }
+
+    .menubrief {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .what,
@@ -2363,39 +2873,40 @@ footer {
     .what {
         text-align: center;
         padding-top: 1.5em;
-        font-size: 11em;
+        font-size: 3em;
     }
 
     .enjoy {
-        font-size: 10em;
+        font-size: 3.5em;
     }
 
     .note {
-        font-size: 3em;
-        padding-top: 4.5em;
+        font-size: 1em;
+        padding-top: 2em;
     }
 
     .button4 {
-        font-size: 4em;
+        font-size: 1em;
+        text-align: center;
         align-self: center;
         top: 3em;
-        width: 12em;
-        height: 8em;
+        padding: 1em;
+        width: 10em;
         font-family: 'Roboto';
     }
 
     .menuitems {
 
         background-image: none;
-   
+
         background-color: rgb(26, 16, 12);
         width: 90%;
-        height: 150em;
+        height: 35em;
         position: relative;
         align-self: center;
         float: right;
         left: 0em;
-        top: 15em;
+        top: 3em;
         bottom: 0em;
         border-radius: 10px;
         box-shadow: 15px 15px 15px rgb(44, 27, 10);
@@ -2410,7 +2921,7 @@ footer {
     }
 
     .fourthscreen.shrink {
-        height: 80em;
+        height: 35em;
     }
 
     @keyframes fadeIn {
@@ -2431,63 +2942,34 @@ footer {
         align-self: center;
         font-family: sans-serif;
         color: black;
-        font-size: 3em;
+
     }
 
     .menu2 h2 {
-        font-size: 3em;
+        font-size: 1.5em;
     }
 
     .menu2 h1 {
-        font-size: 4em;
+        font-size: 2em;
         padding-bottom: 1em;
     }
 
     .menupic {
         position: relative;
-        width: 50%;
+        width: 30%;
         height: 25%;
         float: right;
-        bottom: 5em;
+        bottom: 2.8em;
         left: 3em;
-
     }
-
-
 
     .fifthscreen {
-        display: flex;
-        /* object-position: center;
-        background-color: #FFFBF3; */
-        flex-direction: column;
-        width: 3080px;
-        height: 200em;
-        top: 25em;
+        width: 100%;
+        height: 50em;
+        top: -3em;
         z-index: 5;
         align-content: center;
-        /* align-items: center; */
         justify-content: center;
-
-        /* position: relative; */
-
-    }
-
-    .tiprow1,
-    .tiprow2 {
-        /* display: flex;
-        justify-content: space-evenly; */
-        flex-direction: row;
-        align-self: center;
-        position: relative;
-        left: 10em;
-        height: 60em;
-        width: 100em;
-        gap: 15em;
-        
-    }
-
-    .tiprow2 {
-        padding-top: 30em;
     }
 
     .tips {
@@ -2496,9 +2978,11 @@ footer {
         align-items: center;
         position: relative;
         object-position: center;
+        display: grid;
+        grid-template-rows: 20em 20em;
+        grid-template-columns: 20% 20% 20%;
+        grid-column-gap: 13%;
         width: 100%;
-        /* display: block; */
-        left: 20%;
     }
 
     .fifthscreen .tip1,
@@ -2507,23 +2991,20 @@ footer {
     .tip4,
     .tip5,
     .tip6 {
-        /* justify-content: center;
-        text-align: center;
-        gap: 1em; */
         position: relative;
-        width: 60%;
+        width: 100%;
     }
 
     .fifthscreen p {
         font-family: sans-serif;
         word-wrap: break-word;
-        padding-top: 0.6em;
-        font-size: 4em;
+        padding-top: 5%;
+        font-size: 1em;
     }
 
     .tiphead {
-        font-family: Roboto;
-        font-size: 6em;
+        font-family: 'Roboto';
+        font-size: 1.5em;
     }
 
     .tip1img,
@@ -2532,61 +3013,43 @@ footer {
     .tip4img,
     .tip5img,
     .tip6img {
-        height: 15em;
-        width: 30em;
+        height: 20%;
+        width: 80%;
     }
 
 
     .sixthscreen {
         background-size: cover;
-        width: 3080px;
-        height: 120em;
-        /* z-index: 6;
-            position: relative; */
-        top: 25em;
+        width: 100%;
+        height: 35em;
+        top: -4em;
     }
 
     .review {
-        font-size: 5em;
-        /* /* color: white; */
+        font-size: 1.5em;
         font-family: 'Roboto';
-        /* word-wrap: break-word;
-            text-align: center;
-            margin: 3em;  */
-        padding-top: 4em;
+        padding-top: 2.5em;
     }
 
     .rating {
-        /* display: flex;
-            justify-content: center; */
-        font-size: 5em;
-        /* width: 100%;
-            text-align: center;
-            top: 5em;
-            gap: 0.5em;
-            position: absolute; */
+        font-size: 1.5em;
     }
 
     .username {
-        font-size: 2.5em;
-        /* color: white; */
+        font-size: 1em;
         font-family: 'Roboto';
-        /* text-align: center; */
         top: 0;
         position: relative;
     }
 
-
     .seventhscreen {
-        /* background-image: url("assignment/bg5.jpg"); */
-        height: 200em;
-        width: 3080px;
-        /* z-index: 7; */
-        top: 25em;
+        height: 60em;
+        width: 100%;
+        top: -4em;
         display: flex;
         position: relative;
         justify-content: space-evenly;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .dishes,
@@ -2596,44 +3059,40 @@ footer {
         display: flex;
         text-align: center;
         flex-direction: column;
-        gap: 1.5em;
-        height: 10em;
+        gap: 1em;
+        height: 5em;
         top: 0;
         position: relative;
     }
 
     .seventhscreen p {
-        font-size: 14em;
+        font-size: 4em;
     }
 
     .seventhscreen h1 {
-        font-size: 5em;
+        font-size: 1.5em;
     }
 
     .seventhscreen i {
         color: grey;
-        font-size: 8em;
+        font-size: 2em;
     }
 
 
     .eigthscreen {
         background-size: cover;
-        height: 310em;
-        width: 3080px;
-        top: 25em;
+        height: 80em;
+        width: 100%;
+        top: 0em;
         display: flex;
         position: relative;
         justify-content: space-evenly;
         flex-direction: column;
         gap: 0em;
-        padding: 5em;
+        padding: 5%;
     }
 
     .booking {
-        /* display: flex;
-            flex-direction: column;
-            justify-content: center;
-            object-position: center; */
         width: 100%;
         top: 0em;
         margin-left: 0;
@@ -2641,16 +3100,9 @@ footer {
     }
 
     .book {
-        /* background-color: #FDB763;
-            color: white; */
-        /* padding: 0.1; */
-        /* border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            position: relative; */
-        font-size: 3em;
-        height: 6em;
-        /* width: 100%; */
+        font-size: 1.5em;
+        height: 3.5em;
+        width: 100%;
         top: 1em;
         display: flex;
         flex-direction: row;
@@ -2662,18 +3114,18 @@ footer {
 
         color: white;
         text-decoration: none;
-        font-size: 1.6em;
+        font-size: 1.2em;
         align-self: center;
     }
 
     .book p {
         text-align: center;
-        font-size: 1.5em;
+        font-size: 1.2em;
         align-self: center;
     }
 
     .bookatable {
-        font-size: 7em;
+        font-size: 3.5em;
         position: relative;
         text-align: center;
         font-family: 'Roboto';
@@ -2682,22 +3134,12 @@ footer {
 
     input[type=text],
     textarea {
-        font-size: 4em;
-        /* resize: none;
-            background-color: none;
-            opacity: 99%;
-            position: relative;
-            width: 100%;
-            border-color: grey;
-            border-width: 0.1em;
-            border-left: transparent;
-            border-right: transparent; */
-
+        font-size: 1.2em;
     }
 
     input[type=text] {
         background-color: transparent;
-        height: 6em;
+        height: 3em;
     }
 
     textarea {
@@ -2717,25 +3159,23 @@ footer {
         font-family: 'Roboto';
         top: 0em;
         text-align: center;
-        /* padding-top: 6em; */
-        /* word-wrap: break-word; */
-        font-size: 3.8em;
-        /* position: relative; */
+        font-size: 1.5em;
     }
 
     .contactus li {
         display: flex;
         flex-direction: column;
         position: relative;
+        width: 100%;
 
     }
 
     .contactus ul {
         background-color: transparent;
-        /* display: flex;
-            flex-direction: column;
-            position: relative; */
-        top: 0em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        top: 3em;
         float: none;
         left: 0;
     }
@@ -2745,19 +3185,16 @@ footer {
     }
 
     .contactus li p {
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 
     footer {
         justify-content: center;
         display: flex;
         flex-direction: column-reverse;
-        /* gap: 8em; */
         align-items: center;
-        /* position: relative;
-            background-color: #252830; */
-        height: 80em;
-        width: 3080px;
+        height: 20em;
+        width: 100%;
         top: 0;
         z-index: 9;
     }
@@ -2771,29 +3208,1378 @@ footer {
         float: none;
         margin-right: 0;
         top: 0em;
-        /* align-self: center;
-            object-position: center; */
     }
 
     .smicons a {
         padding: 0.2em;
         color: lightgray;
         text-decoration: none;
-        font-size: 8em;
+        font-size: 3em;
     }
 
-    .footerlogo,
-    .designer {
+    .footerlogo {
         display: none;
     }
 
-    .cc {
-        font-size: 4em;
+    .copyright {
+        margin-left: 0;
         text-align: center;
-        /* width: 100%; */
+        align-self: center;
+        width: 100%;
+        top: 3em;
+    }
+
+    .designer {
+        display: block;
+    }
+
+    .cc {
+        font-size: 1.5em;
+        text-align: center;
     }
 
 
+}
+
+
+
+@media screen and (min-width: 992px) and (max-width: 1440px) {
+
+    .navitems {
+        list-style: none;
+        display: flex;
+        gap: 3em;
+        font-family: sans-serif;
+        float: right;
+        right: 5em;
+        padding-right: 2.5em;
+    }
+
+    li {
+        color: white;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 3em;
+        z-index: 20;
+    }
+
+    header.stuck {
+        background-color: #252830;
+    }
+
+    header a:hover {
+        color: rgb(19, 137, 233);
+
+    }
+
+    .logo {
+        height: 1.5em;
+        width: 6em;
+        position: relative;
+        left: 2em;
+    }
+
+    .navitems li a {
+        text-decoration: white;
+        color: white;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+
+    .firstscreen {
+        background-image: url("assignment/restaurant.jpg");
+        background-size: cover;
+        display: flex;
+        width: 100%;
+        height: 70em;
+        z-index: 2;
+        position: absolute;
+    }
+
+    .Because {
+        position: absolute;
+        font-size: 4em;
+        color: white;
+        font-family: Roboto;
+        padding-left: 0.9em;
+        padding-top: 1.6em;
+    }
+
+    .youre h1 {
+        font-size: 6em;
+        font-weight: bold;
+        color: white;
+        font-family: sans-serif;
+        padding-left: 0.7em;
+        padding-top: 2.0em;
+    }
+
+    .worthit h1 {
+        position: absolute;
+        font-size: 6em;
+        font-weight: bold;
+        color: white;
+        font-family: sans-serif;
+        left: 0.7em;
+    }
+
+    .youreworthit {
+        visibility: hidden;
+    }
+
+    .stickers {
+        align-self: center;
+        width: 100%;
+        padding-right: 2%;
+        padding-left: 2%;
+        justify-content: center;
+        left: 0%;
+        padding-top: 22em;
+    }
+
+    .stickergrid {
+        display: grid;
+        grid-template-rows: 21em;
+        grid-template-columns: 23% 23% 23% 23%;
+        gap: 2.5%;
+    }
+
+    .sticker1,
+    .sticker2,
+    .sticker3,
+    .sticker4 {
+        gap: 0.4em;
+        background-color: white;
+        height: 21em;
+        width: 100%;
+    }
+
+    .sticker1pic,
+    .sticker2pic,
+    .sticker3pic,
+    .sticker4pic {
+        width: 98%;
+        height: 55%;
+        position: relative;
+        padding: 0.3em;
+        margin-top: 0em;
+    }
+
+    .sticker1 p,
+    .sticker2 p,
+    .sticker3 p,
+    .sticker4 p {
+        position: relative;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 1.2em;
+        top: 1.3em
+    }
+
+    .stamp {
+        position: relative;
+        left: 4em;
+        font-family: sans-serif;
+        font-size: 1.2em;
+        top: 1.2em
+    }
+
+    .stickerprice {
+        display: none;
+    }
+
+    .secondscreen {
+        display: flex;
+        justify-content: center;
+        background-image: url('/assignment/pattern.png');
+        width: 100%;
+        height: 50em;
+        z-index: 3;
+        position: relative;
+        top: 68em;
+    }
+
+    .page1 {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .discover {
+        object-position: center;
+        font-size: 3em;
+        color: black;
+        font-weight: lighter;
+        font-family: Roboto;
+        top: 20%;
+        position: absolute;
+    }
+
+    .discoverpic {
+        width: 75%;
+        height: 35%;
+        position: relative;
+        object-position: center;
+        top: 65%;
+    }
+
+    .shortstory {
+        object-position: center;
+        word-wrap: break-word;
+        font-size: 1em;
+        height: 20em;
+        width: 30em;
+        color: black;
+        font-weight: lighter;
+        font-family: sans-serif;
+        position: absolute;
+        top: 35%;
+        text-align: center;
+    }
+
+    .thirdscreen {
+        background-image: url("assignment/checked_menu.jpg");
+        background-size: 100%;
+        background-position-x: center;
+        background-position-y: center;
+        width: 100%;
+        height: 100%;
+        z-index: -5;
+        position: fixed;
+        overflow-x: hidden;
+    }
+
+    .fourthscreen {
+        display: flex;
+        opacity: 100%;
+        width: 100%;
+        height: 40em;
+        z-index: 4;
+        position: relative;
+        top: 80em;
+    }
+
+    .what {
+        color: white;
+        font-size: 4em;
+        position: relative;
+        font-family: 'Roboto';
+        word-wrap: break-word;
+        left: 0.5em;
+    }
+
+    .enjoy {
+        color: white;
+        font-size: 4.5em;
+        word-wrap: break-word;
+        position: absolute;
+        font-family: Arial Thin;
+        left: 0.5em;
+        top: 1em;
+    }
+
+    .note {
+        color: white;
+        font-size: 1em;
+        position: absolute;
+        font-family: Arial Thin;
+        top: 16em;
+        left: 2.8em;
+    }
+
+    .button4 {
+        background-color: rgb(221, 173, 82);
+        color: white;
+        font-size: 1em;
+        height: 4.5em;
+        width: 13em;
+        border-radius: 0.5em;
+        left: 2.8em;
+    }
+
+    .button4:hover {
+        cursor: pointer;
+    }
+
+    .menuitems {
+        background-image: url("/assignment/checked_menu.jpg");
+        width: 35%;
+        height: 75%;
+        position: relative;
+        float: right;
+        left: 0;
+        bottom: 3em;
+        border-radius: 10px;
+        box-shadow: 15px 15px 15px rgb(44, 27, 10);
+        opacity: 1;
+        transition: opacity 0.75s ease-in-out;
+
+    }
+
+    .menubrief {
+        position: relative;
+        width: 60%;
+    }
+
+    .menuitems.fade {
+        opacity: 0;
+    }
+
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+
+
+    .menu2 {
+        position: relative;
+        align-self: center;
+        object-position: center;
+        background-color: #FFFBF3;
+        opacity: 60%;
+        height: 90%;
+        width: 90%;
+        left: 5%;
+        top: 5%;
+        padding-top: 1em;
+        border-radius: 10px;
+    }
+
+    .menu2 h1,
+    .menu2 h2,
+    .menu2 p {
+        text-align: center;
+        align-self: center;
+        font-family: sans-serif;
+        color: black;
+    }
+
+    .menu2 h2 {
+        font-size: 1em;
+    }
+
+    .menupic {
+        position: relative;
+        width: 40%;
+        height: 25%;
+        float: right;
+        bottom: 2em;
+        left: 3em;
+
+    }
+
+    .fifthscreen {
+        display: flex;
+        object-position: center;
+        background-image: url('/assignment/pattern.png');
+        width: 100%;
+        height: 70em;
+        top: 70em;
+        z-index: 5;
+        position: relative;
+    }
+
+    .tips {
+        align-self: center;
+        justify-content: space-evenly;
+        display: grid;
+        grid-template-rows: 25em 25em;
+        grid-template-columns: 15em 15em 15em;
+        grid-column-gap: 8em;
+        width: 100%;
+    }
+
+    .fifthscreen .tip1,
+    .tip2,
+    .tip3,
+    .tip4,
+    .tip5,
+    .tip6 {
+        justify-content: center;
+        text-align: center;
+        gap: 1em;
+        width: 15em;
+    }
+
+    .tip1img,
+    .tip2img,
+    .tip3img,
+    .tip4img,
+    .tip5img,
+    .tip6img {
+        height: 8em;
+        width: 12em;
+        position: relative;
+        object-position: center;
+    }
+
+    .fifthscreen p,
+    .tiphead {
+        font-family: Roboto;
+        color: black;
+        padding-top: 0.6em;
+    }
+
+    .fifthscreen p {
+        font-family: sans-serif;
+        word-wrap: break-word;
+        padding-top: 0.6em;
+    }
+
+    .tiphead {
+        font-family: Roboto;
+        font-size: 2em;
+    }
+
+
+    .sixthscreen {
+        background-image: url("assignment/bg21.jpg");
+        background-position: center;
+        background-size: 100%;
+        object-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 40em;
+        z-index: 6;
+        position: relative;
+        top: 60em;
+    }
+
+    .checked {
+        color: gold;
+    }
+
+    .rating {
+        display: flex;
+        justify-content: center;
+        font-size: 2em;
+        width: 100%;
+        text-align: center;
+        top: 5em;
+        gap: 0.5em;
+        position: absolute;
+    }
+
+    .review {
+        font-size: 1.5em;
+        color: white;
+        font-family: sans-serif;
+        word-wrap: break-word;
+        text-align: center;
+        margin: 3em;
+        top: 2em;
+    }
+
+    .username {
+        font-size: 0.7em;
+        color: white;
+        font-family: sans-serif;
+        text-align: center;
+        top: 12em;
+    }
+
+    .seventhscreen {
+        background-image: url("assignment/bg5.jpg");
+        height: 30em;
+        width: 100%;
+        z-index: 7;
+        top: 60em;
+        display: flex;
+        position: relative;
+        justify-content: space-evenly;
+    }
+
+    .seventhscreen p,
+    h1 {
+        font-family: 'Roboto';
+        color: black;
+
+    }
+
+    .seventhscreen p {
+        font-size: 6em;
+    }
+
+    .seventhscreen h1 {
+        font-size: 1em;
+    }
+
+    .seventhscreen i {
+        color: grey;
+        font-size: 3em;
+    }
+
+    .dishes,
+    .drinks,
+    .clients,
+    .likes {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        gap: 1.5em;
+        height: 10em;
+        top: 10em;
+        position: relative;
+    }
+
+    .eigthscreen {
+        background-image: url("assignment/bg36.jpg");
+        height: 50em;
+        width: 100%;
+        z-index: 8;
+        top: 60em;
+        display: flex;
+        position: relative;
+        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 8em;
+    }
+
+    .bookatable {
+        color: white;
+        font-size: 3em;
+        position: relative;
+        font-family: sans-serif;
+        margin-bottom: 1em;
+    }
+
+    input[type=text],
+    textarea {
+        resize: none;
+        background-color: none;
+        opacity: 99%;
+        position: relative;
+        width: 100%;
+        border-color: grey;
+        border-width: 0.1em;
+        border-left: transparent;
+        border-right: transparent;
+
+    }
+
+    input[type=text] {
+        background-color: transparent;
+        height: 6em;
+    }
+
+    textarea {
+        background-color: transparent;
+        height: 10em;
+        font-family: sans-serif;
+    }
+
+
+    .book {
+        background-color: #FDB763;
+        color: white;
+        padding: 0.7em;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        font-size: 1.5em;
+        height: 3em;
+        width: 100%;
+        top: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5em;
+    }
+
+    .book a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .booking {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        object-position: center;
+        width: 45%;
+        margin-left: 3em;
+        position: relative;
+    }
+
+    form {
+        position: relative;
+        top: 2em;
+        width: 100%;
+    }
+
+    .contact {
+        width: 35%;
+        position: relative;
+        margin-right: 3em;
+    }
+
+    .contactbrief {
+        color: white;
+        font-family: sans-serif;
+        top: 22em;
+        word-wrap: break-word;
+        font-size: 1em;
+        position: relative;
+    }
+
+    footer {
+        justify-content: space-evenly;
+        position: relative;
+        background-color: #252830;
+        height: 15em;
+        width: 100%;
+        top: 60em;
+        z-index: 9;
+    }
+
+    .copyright {
+        font-family: sans-serif;
+        color: white;
+        position: relative;
+        top: 6.5em;
+        margin-left: 1em;
+    }
+
+    .smicons {
+        position: relative;
+        gap: 0.7em;
+        float: right;
+        margin-right: 3em;
+        top: 3.5em;
+    }
+
+    .smicons a {
+        padding: 0.2em;
+        color: lightgray;
+        text-decoration: none;
+        font-size: 2em;
+    }
+
+    .multilogo {
+        width: 30em;
+        display: flex;
+        position: relative;
+        word-wrap: none;
+    }
+
+    .contactus li p {
+        color: white;
+        margin-left: 1em;
+        font-family: 'Roboto';
+    }
+
+    .contactus li {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+    }
+
+    .contactus li i {
+        color: grey;
+    }
+
+    .contactus ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        position: relative;
+        top: 25em;
+        float: left;
+        left: 0.5em;
+    }
+
+
+
+}
+
+
+
+
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+
+
+
+    .navitems {
+        list-style: none;
+        display: flex;
+        gap: 3em;
+        font-family: sans-serif;
+        float: right;
+        right: 5em;
+        padding-right: 2.5em;
+    }
+
+    li {
+        color: white;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 3em;
+        z-index: 20;
+    }
+
+    header.stuck {
+        background-color: #252830;
+    }
+
+
+    header a:hover {
+        color: rgb(19, 137, 233);
+    }
+
+    .logo {
+        height: 1.5em;
+        width: 6em;
+        position: relative;
+        left: 2em;
+    }
+
+    .navitems li a {
+        text-decoration: white;
+        color: white;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .firstscreen {
+        background-image: url("assignment/restaurant.jpg");
+        background-size: cover;
+        display: flex;
+        width: 100%;
+        height: 70em;
+        z-index: 2;
+        position: absolute;
+    }
+
+    .Because {
+        position: absolute;
+        font-size: 4em;
+        color: white;
+        font-family: Roboto;
+        padding-left: 0.9em;
+        padding-top: 1.6em;
+    }
+
+    .youre h1 {
+        font-size: 6em;
+        font-weight: bold;
+        color: white;
+        font-family: sans-serif;
+        padding-left: 0.7em;
+        padding-top: 2.0em;
+    }
+
+    .worthit h1 {
+        position: absolute;
+        font-size: 6em;
+        font-weight: bold;
+        color: white;
+        font-family: sans-serif;
+        left: 0.7em;
+    }
+
+    .youreworthit {
+        visibility: hidden;
+
+    }
+
+    .stickers {
+        align-self: center;
+        width: 100%;
+        padding-right: 2%;
+        padding-left: 2%;
+        justify-content: center;
+        left: 0%;
+        padding-top: 22em;
+    }
+
+    .stickergrid {
+        display: grid;
+        grid-template-rows: 21em;
+        grid-template-columns: 23% 23% 23% 23%;
+        gap: 2.5%;
+    }
+
+    .sticker1,
+    .sticker2,
+    .sticker3,
+    .sticker4 {
+        gap: 0.4em;
+        background-color: white;
+        height: 21em;
+        width: 100%;
+    }
+
+    .sticker1pic,
+    .sticker2pic,
+    .sticker3pic,
+    .sticker4pic {
+        width: 98%;
+        height: 55%;
+        position: relative;
+        padding: 0.3em;
+        margin-top: 0em;
+    }
+
+    .sticker1 p,
+    .sticker2 p,
+    .sticker3 p,
+    .sticker4 p {
+        position: relative;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 1.2em;
+        top: 1.3em
+    }
+
+    .stamp {
+        position: relative;
+        left: 4em;
+        font-family: sans-serif;
+        font-size: 1.2em;
+        top: 1.2em
+    }
+
+    .stickerprice {
+        display: none;
+    }
+
+    .secondscreen {
+        display: flex;
+        justify-content: center;
+        background-image: url('/assignment/pattern.png');
+        width: 100%;
+        height: 50em;
+        z-index: 3;
+        position: relative;
+        top: 68em;
+    }
+
+    .page1 {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .discover {
+        object-position: center;
+        font-size: 3em;
+        color: black;
+        font-weight: lighter;
+        font-family: Roboto;
+        top: 20%;
+        position: absolute;
+    }
+
+    .discoverpic {
+        width: 75%;
+        height: 35%;
+        position: relative;
+        object-position: center;
+        top: 65%;
+    }
+
+    .shortstory {
+        object-position: center;
+        word-wrap: break-word;
+        font-size: 1em;
+        height: 20em;
+        width: 30em;
+        color: black;
+        font-weight: lighter;
+        font-family: sans-serif;
+        position: absolute;
+        top: 35%;
+        text-align: center;
+    }
+
+    .thirdscreen {
+        background-image: url("assignment/checked_menu.jpg");
+        background-size: 100%;
+        background-position-x: center;
+        background-position-y: center;
+        width: 100%;
+        height: 100%;
+        z-index: -5;
+        position: fixed;
+        overflow-x: hidden;
+    }
+
+    .fourthscreen {
+        display: flex;
+        opacity: 100%;
+        width: 100%;
+        height: 40em;
+        z-index: 4;
+        position: relative;
+        top: 80em;
+    }
+
+    .what {
+        color: white;
+        font-size: 4em;
+        position: relative;
+        font-family: 'Roboto';
+        word-wrap: break-word;
+        left: 0.5em;
+    }
+
+    .enjoy {
+        color: white;
+        font-size: 4.5em;
+        word-wrap: break-word;
+        position: absolute;
+        font-family: Arial Thin;
+        left: 0.5em;
+        top: 1em;
+    }
+
+    .note {
+        color: white;
+        font-size: 1em;
+        position: absolute;
+        font-family: Arial Thin;
+        top: 16em;
+        left: 2.8em;
+    }
+
+    .button4 {
+        background-color: rgb(221, 173, 82);
+        color: white;
+        font-size: 1em;
+        height: 4.5em;
+        width: 13em;
+        border-radius: 0.5em;
+        left: 2.8em;
+    }
+
+    .button4:hover {
+        cursor: pointer;
+    }
+
+    .menuitems {
+        background-image: url("/assignment/checked_menu.jpg");
+        width: 35%;
+        height: 75%;
+        position: relative;
+        float: right;
+        left: 0;
+        bottom: 3em;
+        border-radius: 10px;
+        box-shadow: 15px 15px 15px rgb(44, 27, 10);
+        opacity: 1;
+        transition: opacity 0.75s ease-in-out;
+
+    }
+
+    .menubrief {
+        position: relative;
+        width: 60%;
+    }
+
+    .menuitems.fade {
+        opacity: 0;
+    }
+
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .menu2 {
+        position: relative;
+        align-self: center;
+        object-position: center;
+        background-color: #FFFBF3;
+        opacity: 60%;
+        height: 90%;
+        width: 90%;
+        left: 5%;
+        top: 5%;
+        padding-top: 1em;
+        border-radius: 10px;
+    }
+
+    .menu2 h1,
+    .menu2 h2,
+    .menu2 p {
+        text-align: center;
+        align-self: center;
+        font-family: sans-serif;
+        color: black;
+    }
+
+    .menu2 h2 {
+        font-size: 1em;
+    }
+
+    .menupic {
+        position: relative;
+        width: 40%;
+        height: 25%;
+        float: right;
+        bottom: 2em;
+        left: 3em;
+
+    }
+
+    .fifthscreen {
+        display: flex;
+        object-position: center;
+        background-image: url('/assignment/pattern.png');
+        width: 100%;
+        height: 70em;
+        top: 70em;
+        z-index: 5;
+        position: relative;
+
+    }
+
+    .tips {
+        align-self: center;
+        justify-content: space-evenly;
+        display: grid;
+        grid-template-rows: 25em 25em;
+        grid-template-columns: 15em 15em 15em;
+        grid-column-gap: 8em;
+        width: 100%;
+    }
+
+    .fifthscreen .tip1,
+    .tip2,
+    .tip3,
+    .tip4,
+    .tip5,
+    .tip6 {
+        justify-content: center;
+        text-align: center;
+        gap: 1em;
+        width: 15em;
+    }
+
+    .tip1img,
+    .tip2img,
+    .tip3img,
+    .tip4img,
+    .tip5img,
+    .tip6img {
+        height: 8em;
+        width: 12em;
+        position: relative;
+        object-position: center;
+    }
+
+    .fifthscreen p,
+    .tiphead {
+        font-family: Roboto;
+        color: black;
+        padding-top: 0.6em;
+    }
+
+    .fifthscreen p {
+        font-family: sans-serif;
+        word-wrap: break-word;
+        padding-top: 0.6em;
+    }
+
+    .tiphead {
+        font-family: Roboto;
+        font-size: 2em;
+    }
+
+
+    .sixthscreen {
+        background-image: url("assignment/bg21.jpg");
+        background-position: center;
+        background-size: 100%;
+        object-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 40em;
+        z-index: 6;
+        position: relative;
+        top: 60em;
+    }
+
+    .checked {
+        color: gold;
+    }
+
+    .rating {
+        display: flex;
+        justify-content: center;
+        font-size: 2em;
+        width: 100%;
+        text-align: center;
+        top: 5em;
+        gap: 0.5em;
+        position: absolute;
+    }
+
+    .review {
+        font-size: 1.5em;
+        color: white;
+        font-family: sans-serif;
+        word-wrap: break-word;
+        text-align: center;
+        margin: 3em;
+        top: 2em;
+    }
+
+    .username {
+        font-size: 0.7em;
+        color: white;
+        font-family: sans-serif;
+        text-align: center;
+        top: 12em;
+    }
+
+    .seventhscreen {
+        background-image: url("assignment/bg5.jpg");
+        height: 30em;
+        width: 100%;
+        z-index: 7;
+        top: 60em;
+        display: flex;
+        position: relative;
+        justify-content: space-evenly;
+    }
+
+    .seventhscreen p,
+    h1 {
+        font-family: 'Roboto';
+        color: black;
+
+    }
+
+    .seventhscreen p {
+        font-size: 6em;
+    }
+
+    .seventhscreen h1 {
+        font-size: 1em;
+    }
+
+    .seventhscreen i {
+        color: grey;
+        font-size: 3em;
+    }
+
+    .dishes,
+    .drinks,
+    .clients,
+    .likes {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        gap: 1.5em;
+        height: 10em;
+        top: 10em;
+        position: relative;
+    }
+
+    .eigthscreen {
+        background-image: url("assignment/bg36.jpg");
+        height: 50em;
+        width: 100%;
+        z-index: 8;
+        top: 60em;
+        display: flex;
+        position: relative;
+        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 8em;
+    }
+
+    .bookatable {
+        color: white;
+        font-size: 3em;
+        position: relative;
+        font-family: sans-serif;
+        margin-bottom: 1em;
+    }
+
+    input[type=text],
+    textarea {
+        resize: none;
+        background-color: none;
+        opacity: 99%;
+        position: relative;
+        width: 100%;
+        border-color: grey;
+        border-width: 0.1em;
+        border-left: transparent;
+        border-right: transparent;
+
+    }
+
+    input[type=text] {
+        background-color: transparent;
+        height: 6em;
+    }
+
+    textarea {
+        background-color: transparent;
+        height: 10em;
+        font-family: sans-serif;
+    }
+
+
+    .book {
+        background-color: #FDB763;
+        color: white;
+        padding: 0.7em;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        font-size: 1.5em;
+        height: 3em;
+        width: 100%;
+        top: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5em;
+    }
+
+    .book a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .booking {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        object-position: center;
+        width: 45%;
+        margin-left: 3em;
+        position: relative;
+    }
+
+    form {
+        position: relative;
+        top: 2em;
+        width: 100%;
+    }
+
+    .contact {
+        width: 35%;
+        position: relative;
+        margin-right: 3em;
+    }
+
+    .contactbrief {
+        color: white;
+        font-family: sans-serif;
+        top: 22em;
+        word-wrap: break-word;
+        font-size: 1em;
+        position: relative;
+    }
+
+    footer {
+        justify-content: space-evenly;
+        position: relative;
+        background-color: #252830;
+        height: 15em;
+        width: 100%;
+        top: 60em;
+        z-index: 9;
+    }
+
+    .copyright {
+        font-family: sans-serif;
+        color: white;
+        position: relative;
+        top: 6.5em;
+        margin-left: 1em;
+    }
+
+    .smicons {
+        position: relative;
+        gap: 0.7em;
+        float: right;
+        margin-right: 3em;
+        top: 3.5em;
+    }
+
+    .smicons a {
+        padding: 0.2em;
+        color: lightgray;
+        text-decoration: none;
+        font-size: 2em;
+    }
+
+    .multilogo {
+        width: 30em;
+        display: flex;
+        position: relative;
+        word-wrap: none;
+    }
+
+    .contactus li p {
+        color: white;
+        margin-left: 1em;
+        font-family: 'Roboto';
+    }
+
+    .contactus li {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+    }
+
+    .contactus li i {
+        color: grey;
+    }
+
+    .contactus ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        position: relative;
+        top: 25em;
+        float: left;
+        left: 0.5em;
+    }
 
 
 
