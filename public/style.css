@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+ .aboutbody{
+     width: 100%;
+    background-image: url('/assignment/bg36.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactbody{
+    display: flex;
+    background-image: url('/assignment/bg36.jpg');
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+  
+}
+
+.comments{
+display: grid;
+align-self:center;
+grid-template-rows: 3em 3em 3em ;
+grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+grid-column-gap: 0.5em;
+grid-row-gap: 10em;
+}
+
+.comment{
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    /* gap: 0.2em; */
+    background-color:rgba(252, 252, 252, 0.7);
+    height: 12em;
+    align-items: center;
+}
+
+.user-labels{
+    word-wrap: break-word;
+    height: 0.1em;
+    font-family: sans-serif;
+    font-size: 0.8em;
+}
+
+.comment-labels{
+    font-family: sans-serif;
+    font-size: 100%; 
+    text-align: center;
+}
+
+.starz{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-note{
+color: white;
+font-family: 'Roboto';
+font-size: 1.8em;
+
+}
+.form-holder{
+    /* background-color: #252830;   */
+    /* background-color:rgba(194, 181, 169, 0.4); */
+    background-color:rgba(252, 252, 252, 0.4);
+    width: 34em;
+    height: 25em;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.newreview{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30em;
+    gap: 1em;
+    /* background-color: #252830; */
+}
+
+.field{
+    height: 3em;
+    width: 95%;
+    border-radius: 3px;
+    border-color: #252830;
+    background-color: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-top: transparent;
+    color: black;
+    font-family: sans-serif;
+}
+
+.commentfield{
+    width: 95%;
+    height: 6em;
+    border-radius: 3px;
+    border-color: #252830;
+    background-color: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-top: transparent;
+    color: black;
+    font-family: sans-serif;
+}
+
+::placeholder{
+    color: black;   
+}
+
+.submit{
+    background-color: #252830; 
+    color: white;
+    font-family: 'Roboto';
+    font-size: 1em;
+    border-color: transparent;
+    border-radius: 3px;
+    width: 40%; 
+}
+
+.star-rating{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    color: yellow;
+}
+
+.back{
+    padding-top: 1em;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: 'Roboto';
+}

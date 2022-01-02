@@ -1,0 +1,45 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us</title>
+    
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      </head>
+    
+    <body class="aboutbody">
+     <p>This is About test</p>
+
+     <div class="comments">
+     <% if(info.length > 0){ %>
+        <% info.forEach(review => { %>
+        <div class="comment">
+         <p class="comment-labels"><%= review.comment %> </p> 
+
+            <div class="starz">
+           <% let stars = review.rating; %>
+          <%  for(let i=0; i< stars; i++){ %>
+             <span class="fa fa-star<%= (i < stars - 0.5)? '' : ' checked'%>"> </span> 
+          <%  } %>
+          </div>
+         <p class="user-labels"><%= review.rating %> stars </p> 
+   
+
+     <p class="user-labels"><%= review.fullName %></p> 
+     <p class="user-labels"><%= review.city %></p> 
+    </div>
+     <% }) %>
+     <% } %>
+
+    </div>
+
+     
+
+    <a href="/">Back to Home</a>
+     
+
+    <script src="../server.js"></script>
+      
+    </body>
+    </html>
