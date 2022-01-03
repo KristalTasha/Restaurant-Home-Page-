@@ -610,6 +610,15 @@ form {
     position: relative;
 }
 
+.leave-comment{
+color: white;
+cursor: pointer;
+text-decoration: none;
+margin-left: 1em;
+font-size: 1em;
+font-family: 'Roboto';
+}
+
 footer {
     justify-content: space-evenly;
     position: relative;

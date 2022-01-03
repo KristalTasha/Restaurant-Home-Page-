@@ -1,36 +1,36 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact Us</title>
-    
-        <link rel="stylesheet" href="../../style.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      </head>
-    
-    <body class="contactbody">
-     <p class="contact-note">Kindly leave us a comment</p>
 
-     <div class="form-holder">
-        <form class="newreview" action="/contacts" method="POST">
-          <input class="field" type="text" name="fullName" placeholder="Full Name">
-          <input class="field" type="text" name="city"  placeholder="City">
-          <textarea class="commentfield" type="text" name="comment" placeholder="Leave a comment about our service"></textarea>
-         <input class="field" type="text" name="rating" placeholder="Rate us out of 5"> 
+  <%- include('./partials/head.ejs') %>
 
-          <br>
-          <button class="submit" value="Submit">
-            <p>Submit</p>
-          </button>
+<body class="contactbody">
 
-        </form>
+  <div class="about-header">
+    <a class="about-back" href="/">Back to Home</a>
+    <a class="about-back" href="/about">About Us</a>
 
-        
-        
-    </div>
+  </div>
+  <p class="contact-note">Kindly leave us a comment</p>
 
-    <a class="back" href="/">Back to Home</a>
+  <div class="form-holder">
+    <form class="newreview" action="/contacts" method="POST">
+      <input class="field" type="text" name="fullName" placeholder="Full Name" maxlength="20">
+      <input class="field" type="text" name="city" placeholder="City" maxlength="20">
+      <textarea class="commentfield" type="text" name="comment" placeholder="Leave a comment about our service"
+        maxlength="100"></textarea>
+      <input class="field" type="number" name="rating" placeholder="Rate us out of 5" max="5">
 
-      
-    </body>
-    </html>
+      <br>
+      <button class="submit" value="Submit">
+        <p>Submit</p>
+      </button>
+
+    </form>
+
+
+
+  </div>
+
+
+</body>
+
+</html>

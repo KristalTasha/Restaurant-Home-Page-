@@ -1,70 +1,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
- .aboutbody{
-     width: 100%;
+.aboutbody {
+    /* width: 100%; */
     background-image: url('/assignment/bg36.jpg');
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.contactbody{
+.contactbody {
     display: flex;
     background-image: url('/assignment/bg36.jpg');
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
-  
+
 }
 
-.comments{
-display: grid;
-align-self:center;
-grid-template-rows: 3em 3em 3em ;
-grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-grid-column-gap: 0.5em;
-grid-row-gap: 10em;
+.submitted-body {
+    display: flex;
+    background-image: url('/assignment/bg36.jpg');
+    justify-items: center;
+    gap: 4em;
+    align-items: center;
+    flex-direction: column;
 }
 
-.comment{
+
+.grid-holder {
+    /* background-color: #252830; */
+    /* height: 90%; */
+    width: 95%;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+
+}
+
+.comments {
+    display: grid;
+    padding-top: 1.5em;
+    align-self: center;
+    grid-template-rows: 3em 3em 3em 3em 3em 3em 3em 3em 3em;
+    grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    grid-column-gap: 2%;
+    grid-row-gap: 10em;
+}
+
+.comment {
     display: flex;
     flex-direction: column;
     border-radius: 3px;
     /* gap: 0.2em; */
-    background-color:rgba(252, 252, 252, 0.7);
+    background-color: rgba(252, 252, 252, 0.5);
     height: 12em;
     align-items: center;
+    justify-content: center;
 }
 
-.user-labels{
+.user-labels {
     word-wrap: break-word;
-    height: 0.1em;
+    height: 1px;
     font-family: sans-serif;
-    font-size: 0.8em;
+    font-size: 75%;
 }
 
-.comment-labels{
+.comment-labels {
     font-family: sans-serif;
-    font-size: 100%; 
+    font-size: 80%;
     text-align: center;
 }
 
-.starz{
+.starz {
     display: flex;
     flex-direction: row;
 }
 
-.contact-note{
-color: white;
-font-family: 'Roboto';
-font-size: 1.8em;
+.contact-note {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 1.8em;
+    text-align: center;
 
 }
-.form-holder{
+
+.form-holder {
     /* background-color: #252830;   */
     /* background-color:rgba(194, 181, 169, 0.4); */
-    background-color:rgba(252, 252, 252, 0.4);
-    width: 34em;
+    background-color: rgba(252, 252, 252, 0.4);
+    width: 50%;
     height: 25em;
     border-radius: 5px;
     display: flex;
@@ -73,16 +98,16 @@ font-size: 1.8em;
 
 }
 
-.newreview{
+.newreview {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30em;
+    width: 100%;
     gap: 1em;
     /* background-color: #252830; */
 }
 
-.field{
+.field {
     height: 3em;
     width: 95%;
     border-radius: 3px;
@@ -95,7 +120,7 @@ font-size: 1.8em;
     font-family: sans-serif;
 }
 
-.commentfield{
+.commentfield {
     width: 95%;
     height: 6em;
     border-radius: 3px;
@@ -108,32 +133,282 @@ font-size: 1.8em;
     font-family: sans-serif;
 }
 
-::placeholder{
-    color: black;   
+::placeholder {
+    color: black;
 }
 
-.submit{
-    background-color: #252830; 
+.submit {
+    background-color: #252830;
     color: white;
     font-family: 'Roboto';
     font-size: 1em;
     border-color: transparent;
     border-radius: 3px;
-    width: 40%; 
+    width: 40%;
 }
 
-.star-rating{
+.star-rating {
     display: flex;
     flex-direction: row;
     cursor: pointer;
     color: yellow;
 }
 
-.back{
+.back {
     padding-top: 1em;
     color: white;
     cursor: pointer;
     text-decoration: none;
     font-size: 1em;
     font-family: 'Roboto';
+}
+
+.about-back {
+    padding-top: 1em;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: 'Roboto';
+    float: right;
+    padding-left: 1em;
+}
+
+.about-header {
+    width: 95%;
+    float: right;
+}
+
+.about-title {
+    color: white;
+    font-family: "Roboto";
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.submit-note {
+    height: 60%;
+    width: 70%;
+    top: 30%;
+    align-self: center;
+    background-color: rgba(252, 252, 252, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.thanks{
+    font-size: 2.5em;
+    color: black;
+    font-family: "Roboto";
+    text-align: center;
+}
+
+@media screen and (max-width: 280px) {
+
+    .comments {
+        display: grid;
+        padding-top: 1.5em;
+        align-self: center;
+        grid-template-rows: 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em;
+        grid-template-columns: 45% 45%;
+        grid-column-gap: 6%;
+        grid-row-gap: 10em;
+    }
+
+    .aboutbody {
+        width: 100%;
+    }
+
+    .about-back {
+        padding-top: 1em;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1em;
+        font-family: 'Roboto';
+        /* float: right; */
+        padding-left: 1em;
+    }
+    
+    .about-header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /* float: right; */
+    }
+
+    .form-holder{
+        width: 95%;
+    }
+
+    .commentfield{
+        height: 8em;
+    }
+
+    .contact-note{
+        font-size: 1.5em;
+    }
+
+    .thanks{
+        font-size: 1.8em;
+    }
+
+    .submit-note{
+        width: 90%;
+    }
+
+}
+
+
+
+@media screen and (min-width: 280px) and (max-width: 425px) {
+
+    .comments {
+        display: grid;
+        padding-top: 1.5em;
+        align-self: center;
+        grid-template-rows: 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em;
+        grid-template-columns: 30% 30% 30%;
+        grid-column-gap: 3%;
+        grid-row-gap: 10em;
+    }
+
+    .aboutbody {
+        width: 100%;
+    }
+
+    .about-back {
+        padding-top: 1em;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1em;
+        font-family: 'Roboto';
+        /* float: right; */
+        padding-left: 1em;
+    }
+    
+    .about-header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /* float: right; */
+    }
+
+    .form-holder{
+        width: 90%;
+    }
+
+    .contact-note{
+        font-size: 1.6em;
+    }
+
+    .thanks{
+        font-size: 2em;
+    }
+
+    .submit-note{
+        width: 85%;
+    }
+
+
+
+}
+
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+
+    .comments {
+        display: grid;
+        padding-top: 1.5em;
+        align-self: center;
+        grid-template-rows: 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em;
+        grid-template-columns: 23% 23% 23% 23% ;
+        grid-column-gap: 2%;
+        grid-row-gap: 10em;
+    }
+
+    .aboutbody {
+        width: 100%;
+    }
+
+    .about-back {
+        padding-top: 1em;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1em;
+        font-family: 'Roboto';
+        /* float: right; */
+        padding-left: 1em;
+    }
+    
+    .about-header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /* float: right; */
+    }
+
+    .form-holder{
+        width: 70%;
+    }
+
+    .thanks{
+        font-size: 2.2em;
+    }
+
+    .submit-note{
+        width: 80%;
+    }
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    .comments {
+        display: grid;
+        padding-top: 1.5em;
+        align-self: center;
+        grid-template-rows: 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em;
+        grid-template-columns: 18% 18% 18% 18% 18% ;
+        grid-column-gap: 1.8%;
+        grid-row-gap: 10em;
+    }
+
+    .aboutbody {
+        width: 100%;
+    }
+
+    .about-back {
+        padding-top: 1em;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1em;
+        font-family: 'Roboto';
+        /* float: right; */
+        padding-left: 1em;
+    }
+    
+    .about-header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /* float: right; */
+    }
+
+    .form-holder{
+        width: 60%;
+    }
+
+
 }

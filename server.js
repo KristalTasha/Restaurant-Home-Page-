@@ -9,75 +9,88 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 6013
 
 const app = express();
- 
+
 app.use(express.static('public'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(cors());
 app.use(morgan("dev"));
 app.set('view engine', "ejs");
 
 
 app.get('/', (req, res) => {
-    // res.sendFile(path.join(__dirname,'public','index.html'));
     res.render('index');
 })
 
 app.get('/about', async (req, res) => {
     // res.send('this is for testing the url')
 
-     const db = await connection.getConnection('restaurant')
+    const db = await connection.getConnection('restaurant')
     db.collection('reviews').find({}).toArray((err, data) => {
 
-     res.render('about', {info: data});
+        res.render('about', {
+            title: "About Us",
+            info: data
+        });
 
     })
 
-   
 })
 
 app.get('/contact', async (req, res) => {
-    // res.send('this is for testing the url')
-      res.render('contact');
-   
+    res.render('contact', {
+        title: "Contact Us"
+    });
+
 })
 
 app.get('/submitted', async (req, res) => {
-    
-      res.render('submitted');
-   
+
+    res.render('submitted', {
+        title: "Thank You"
+    });
+
+})
+
+app.get('*', async (req, res) => {
+    res.render('notfound', {
+        title: "404"
+    });
+
 })
 
 
 app.post('/contacts', async (req, res) => {
-   
- let user = {
+
+    let user = {
         fullName: req.body.fullName,
         city: req.body.city,
         comment: req.body.comment,
         rating: req.body.rating,
     };
 
-    // const user = req.body;
-
     const db = await connection.getConnection('restaurant')
 
     db.collection('reviews').insertOne(user, (err, data) => {
-        if(err) throw err;
-        // if(data) res.send(user)
-        if(data) res.redirect('/submitted')
+        if (err) throw err;
 
-        
+        if (data) res.redirect('/submitted')
+
+
     });
 
-    
+
 
 
 })
 
 
-connection.dbConnection().then( () => {
+connection.dbConnection().then(() => {
     app.listen(PORT, () => {
         console.log(`Server listening on ${PORT}!`)
     })
