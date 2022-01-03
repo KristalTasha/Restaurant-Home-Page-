@@ -75,6 +75,11 @@
 .starz {
     display: flex;
     flex-direction: row;
+    gap: 2px;
+}
+
+#staricon{
+    color: rgb(226, 210, 70);
 }
 
 .contact-note {

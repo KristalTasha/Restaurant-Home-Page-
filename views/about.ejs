@@ -23,7 +23,7 @@
             <div class="starz">
                <% let stars = review.rating; %>
                <%  for(let i=0; i< stars; i++){ %>
-               <span class="fa fa-star<%= (i < stars - 0.5)? '' : ' checked'%>"> </span>
+               <span id="staricon" class="fa fa-star<%= (i < stars - 0.5)? '' : ' checked'%>"> </span>
                <%  } %>
             </div>
 
